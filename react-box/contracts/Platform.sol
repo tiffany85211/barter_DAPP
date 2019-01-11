@@ -3,16 +3,16 @@ import "./Items.sol";
 
 contract Platform is Items{
 
-    function newItem(string name, string description) external {
+    function newItem(string name, string description) external payable{
         _createItem(name, description);
     }
 
-    function changeItem(uint id1, uint id2) external {
+    function changeItem(uint id1, uint id2) external payable{
         _changeWith(id1, id2);
     }
 
     function listUserItem() external view returns (uint[] memory) {
         return _listItems();
     }
-    
+
 }
