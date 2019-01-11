@@ -1,7 +1,7 @@
-pragma solidity ^0.4.25;
+pragma solidity ^0.4.24;
 import "./Ownable.sol";
 
-contract Status is Ownable {
+contract Stat is Ownable {
     
     //define Status
     enum Status {POSTING, MATCHED}

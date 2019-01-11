@@ -3,7 +3,7 @@ import "./Ownable.sol";
 import "./SafeMath.sol";
 import "./Status.sol";
 
-contract Items is Ownable, Status{
+contract Items is Ownable, Stat{
     using SafeMath for uint256;
 
     struct Item{
@@ -34,7 +34,7 @@ contract Items is Ownable, Status{
     }
 
     function _listItems() internal view returns (uint[] memory) {
-        uint[] itemIds;
+        uint[] storage itemIds;
         for (uint i = 0; i < _items.length; i++) {
             if (itemToOwner[i] == msg.sender && _items[i]._changeId == 0) {
                 itemIds.push(i);

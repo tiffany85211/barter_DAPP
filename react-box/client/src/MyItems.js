@@ -18,11 +18,9 @@ export default class MyItems extends Component {
     constructor(props) {
       super(props);
       this.state = { 
-        storageValue: 0,
         open: false,
         name: '',
         description: '',
-        newItem: {},
         items: [],
         web3: null, 
         accounts: null, 
@@ -34,15 +32,6 @@ export default class MyItems extends Component {
     }
 
     handleAddItem = async () => {
-      // const items = this.state.items.slice();
-      // const newItem = {
-      //   name       : this.state.name,
-      //   description: this.state.description,
-      //   changeId   : 0, 
-      //   status     : 0
-      // };
-      // items.push(newItem);
-      // this.setState({ newItem, open: false });
       this.setState({ open: false });
       const { accounts, contract } = this.state;
   
