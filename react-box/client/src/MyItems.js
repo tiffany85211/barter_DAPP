@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SimpleStorageContract from "./contracts/SimpleStorage.json";
+import PlatformContract from "./contracts/Platform.json";
 import getWeb3 from "./utils/getWeb3";
 import truffleContract from "truffle-contract";
 
@@ -22,27 +22,38 @@ export default class MyItems extends Component {
         open: false,
         name: '',
         description: '',
-        multiline: 'Controlled',
+        newItem: {},
         items: [],
         web3: null, 
         accounts: null, 
         contract: null,
+        returnVal: '',
       };
-      this.handleAddItem = this.handleAddItem.bind(this);
       this.handleClickAddItem = this.handleClickAddItem.bind(this);
       this.handleClose = this.handleClose.bind(this);
     }
 
-    handleAddItem() {
-      const items = this.state.items.slice();
-      const newItem = {
-        name       : this.state.name,
-        description: this.state.description,
-        changeId   : 0, 
-        status     : 0
-      };
-      items.push(newItem);
-      this.setState({ items, open: false });
+    handleAddItem = async () => {
+      // const items = this.state.items.slice();
+      // const newItem = {
+      //   name       : this.state.name,
+      //   description: this.state.description,
+      //   changeId   : 0, 
+      //   status     : 0
+      // };
+      // items.push(newItem);
+      // this.setState({ newItem, open: false });
+      this.setState({ open: false });
+      const { accounts, contract } = this.state;
+  
+      // Stores a given value, 5 by default.
+      await contract.newItem(this.state.name, this.state.description, { from: accounts[0] });
+
+      const response = await contract.getItem(this.state.name);
+
+      this.setState({ returnVal: response.toString()  });
+      // Get the value from the contract to prove it worked.
+      //const response = contract.();
     }
 
     handleClickAddItem() {
@@ -68,13 +79,13 @@ export default class MyItems extends Component {
         const accounts = await web3.eth.getAccounts();
   
         // Get the contract instance.
-        const Contract = truffleContract(SimpleStorageContract);
+        const Contract = truffleContract(PlatformContract);
         Contract.setProvider(web3.currentProvider);
         const instance = await Contract.deployed();
   
         // Set web3, accounts, and contract to the state, and then proceed with an
         // example of interacting with the contract's methods.
-        this.setState({ web3, accounts, contract: instance }, this.runExample);
+        this.setState({ web3, accounts, contract: instance });
       } catch (error) {
         // Catch any errors for any of the above operations.
         alert(
@@ -84,27 +95,12 @@ export default class MyItems extends Component {
       }
     };
   
-    runExample = async () => {
-      const { accounts, contract } = this.state;
-  
-      // Stores a given value, 5 by default.
-      await contract.set(5, { from: accounts[0] });
-  
-      // Get the value from the contract to prove it worked.
-      const response = await contract.get();
-  
-      // Update state with the result.
-      this.setState({ storageValue: response.toNumber() });
-    };
-  
     render() {
-
       if (!this.state.web3) {
         return <div>Loading Web3, accounts, and contract...</div>;
       }
       return (
         <div className="App">
-        <div>state: {this.state.open.toString()} </div>
           <div className="add-item">
             <FloatingActionButton onClick={this.handleClickAddItem}>
               <ContentAdd />
@@ -138,14 +134,14 @@ export default class MyItems extends Component {
                 variant="filled"
               />
             </DialogContent>
-          <DialogActions>
-            <Button onClick={this.handleClose} color="primary">Cancel</Button>
-            <Button onClick={this.handleAddItem} color="primary">Add Item</Button>
-          </DialogActions>
+            <DialogActions>
+              <Button onClick={this.handleClose} color="primary">Cancel</Button>
+              <Button onClick={this.handleAddItem} color="primary">Add Item</Button>
+            </DialogActions>
         </Dialog>
-
-          <div>The stored value is: {this.state.storageValue}</div>
+          <div>Name: {this.state.returnVal}</div>
         </div>
       );
     }
   }
+
