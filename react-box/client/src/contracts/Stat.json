@@ -118,14 +118,14 @@
     "absolutePath": "/Users/kouniwa/Desktop/bello/NMLab/barter_DAPP/react-box/contracts/Status.sol",
     "exportedSymbols": {
       "Stat": [
-        590
+        595
       ]
     },
-    "id": 591,
+    "id": 596,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 553,
+        "id": 558,
         "literals": [
           "solidity",
           "^",
@@ -138,10 +138,10 @@
       {
         "absolutePath": "/Users/kouniwa/Desktop/bello/NMLab/barter_DAPP/react-box/contracts/Ownable.sol",
         "file": "./Ownable.sol",
-        "id": 554,
+        "id": 559,
         "nodeType": "ImportDirective",
-        "scope": 591,
-        "sourceUnit": 353,
+        "scope": 596,
+        "sourceUnit": 358,
         "src": "25:23:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -152,47 +152,47 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 555,
+              "id": 560,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 352,
+              "referencedDeclaration": 357,
               "src": "67:7:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$352",
+                "typeIdentifier": "t_contract$_Ownable_$357",
                 "typeString": "contract Ownable"
               }
             },
-            "id": 556,
+            "id": 561,
             "nodeType": "InheritanceSpecifier",
             "src": "67:7:4"
           }
         ],
         "contractDependencies": [
-          352
+          357
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 590,
+        "id": 595,
         "linearizedBaseContracts": [
-          590,
-          352
+          595,
+          357
         ],
         "name": "Stat",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Stat.Status",
-            "id": 559,
+            "id": 564,
             "members": [
               {
-                "id": 557,
+                "id": 562,
                 "name": "POSTING",
                 "nodeType": "EnumValue",
                 "src": "119:7:4"
               },
               {
-                "id": 558,
+                "id": 563,
                 "name": "MATCHED",
                 "nodeType": "EnumValue",
                 "src": "128:7:4"
@@ -204,7 +204,7 @@
           },
           {
             "body": {
-              "id": 573,
+              "id": 578,
               "nodeType": "Block",
               "src": "240:48:4",
               "statements": [
@@ -212,24 +212,24 @@
                   "expression": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Status_$559",
+                      "typeIdentifier": "t_enum$_Status_$564",
                       "typeString": "enum Stat.Status"
                     },
-                    "id": 571,
+                    "id": 576,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 568,
+                      "id": 573,
                       "name": "status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 561,
+                      "referencedDeclaration": 566,
                       "src": "257:6:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$559",
+                        "typeIdentifier": "t_enum$_Status_$564",
                         "typeString": "enum Stat.Status"
                       }
                     },
@@ -239,18 +239,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 569,
+                        "id": 574,
                         "name": "Status",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 559,
+                        "referencedDeclaration": 564,
                         "src": "267:6:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Status_$559_$",
+                          "typeIdentifier": "t_type$_t_enum$_Status_$564_$",
                           "typeString": "type(enum Stat.Status)"
                         }
                       },
-                      "id": 570,
+                      "id": 575,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -260,7 +260,7 @@
                       "referencedDeclaration": null,
                       "src": "267:14:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$559",
+                        "typeIdentifier": "t_enum$_Status_$564",
                         "typeString": "enum Stat.Status"
                       }
                     },
@@ -270,29 +270,29 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 567,
-                  "id": 572,
+                  "functionReturnParameters": 572,
+                  "id": 577,
                   "nodeType": "Return",
                   "src": "250:31:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 574,
+            "id": 579,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 564,
+                "id": 569,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 563,
+                  "id": 568,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 286,
+                  "referencedDeclaration": 291,
                   "src": "216:9:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -306,31 +306,31 @@
             "name": "isPosting",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 562,
+              "id": 567,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 561,
+                  "id": 566,
                   "name": "status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 574,
+                  "scope": 579,
                   "src": "187:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Status_$559",
+                    "typeIdentifier": "t_enum$_Status_$564",
                     "typeString": "enum Stat.Status"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 560,
+                    "id": 565,
                     "name": "Status",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 559,
+                    "referencedDeclaration": 564,
                     "src": "187:6:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Status_$559",
+                      "typeIdentifier": "t_enum$_Status_$564",
                       "typeString": "enum Stat.Status"
                     }
                   },
@@ -342,15 +342,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 567,
+              "id": 572,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 566,
+                  "id": 571,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 574,
+                  "scope": 579,
                   "src": "235:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -359,7 +359,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 565,
+                    "id": 570,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "235:4:4",
@@ -374,7 +374,7 @@
               ],
               "src": "234:6:4"
             },
-            "scope": 590,
+            "scope": 595,
             "src": "168:120:4",
             "stateMutability": "view",
             "superFunction": null,
@@ -382,7 +382,7 @@
           },
           {
             "body": {
-              "id": 588,
+              "id": 593,
               "nodeType": "Block",
               "src": "365:48:4",
               "statements": [
@@ -390,24 +390,24 @@
                   "expression": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Status_$559",
+                      "typeIdentifier": "t_enum$_Status_$564",
                       "typeString": "enum Stat.Status"
                     },
-                    "id": 586,
+                    "id": 591,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 583,
+                      "id": 588,
                       "name": "status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 576,
+                      "referencedDeclaration": 581,
                       "src": "382:6:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$559",
+                        "typeIdentifier": "t_enum$_Status_$564",
                         "typeString": "enum Stat.Status"
                       }
                     },
@@ -417,18 +417,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 584,
+                        "id": 589,
                         "name": "Status",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 559,
+                        "referencedDeclaration": 564,
                         "src": "392:6:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Status_$559_$",
+                          "typeIdentifier": "t_type$_t_enum$_Status_$564_$",
                           "typeString": "type(enum Stat.Status)"
                         }
                       },
-                      "id": 585,
+                      "id": 590,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -438,7 +438,7 @@
                       "referencedDeclaration": null,
                       "src": "392:14:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$559",
+                        "typeIdentifier": "t_enum$_Status_$564",
                         "typeString": "enum Stat.Status"
                       }
                     },
@@ -448,29 +448,29 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 582,
-                  "id": 587,
+                  "functionReturnParameters": 587,
+                  "id": 592,
                   "nodeType": "Return",
                   "src": "375:31:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 589,
+            "id": 594,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 579,
+                "id": 584,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 578,
+                  "id": 583,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 286,
+                  "referencedDeclaration": 291,
                   "src": "341:9:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -484,31 +484,31 @@
             "name": "isMatched",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 577,
+              "id": 582,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 576,
+                  "id": 581,
                   "name": "status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 589,
+                  "scope": 594,
                   "src": "312:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Status_$559",
+                    "typeIdentifier": "t_enum$_Status_$564",
                     "typeString": "enum Stat.Status"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 575,
+                    "id": 580,
                     "name": "Status",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 559,
+                    "referencedDeclaration": 564,
                     "src": "312:6:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Status_$559",
+                      "typeIdentifier": "t_enum$_Status_$564",
                       "typeString": "enum Stat.Status"
                     }
                   },
@@ -520,15 +520,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 582,
+              "id": 587,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 581,
+                  "id": 586,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 589,
+                  "scope": 594,
                   "src": "360:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -537,7 +537,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 580,
+                    "id": 585,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "360:4:4",
@@ -552,14 +552,14 @@
               ],
               "src": "359:6:4"
             },
-            "scope": 590,
+            "scope": 595,
             "src": "293:120:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 591,
+        "scope": 596,
         "src": "50:365:4"
       }
     ],
@@ -569,14 +569,14 @@
     "absolutePath": "/Users/kouniwa/Desktop/bello/NMLab/barter_DAPP/react-box/contracts/Status.sol",
     "exportedSymbols": {
       "Stat": [
-        590
+        595
       ]
     },
-    "id": 591,
+    "id": 596,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 553,
+        "id": 558,
         "literals": [
           "solidity",
           "^",
@@ -589,10 +589,10 @@
       {
         "absolutePath": "/Users/kouniwa/Desktop/bello/NMLab/barter_DAPP/react-box/contracts/Ownable.sol",
         "file": "./Ownable.sol",
-        "id": 554,
+        "id": 559,
         "nodeType": "ImportDirective",
-        "scope": 591,
-        "sourceUnit": 353,
+        "scope": 596,
+        "sourceUnit": 358,
         "src": "25:23:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -603,47 +603,47 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 555,
+              "id": 560,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 352,
+              "referencedDeclaration": 357,
               "src": "67:7:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$352",
+                "typeIdentifier": "t_contract$_Ownable_$357",
                 "typeString": "contract Ownable"
               }
             },
-            "id": 556,
+            "id": 561,
             "nodeType": "InheritanceSpecifier",
             "src": "67:7:4"
           }
         ],
         "contractDependencies": [
-          352
+          357
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 590,
+        "id": 595,
         "linearizedBaseContracts": [
-          590,
-          352
+          595,
+          357
         ],
         "name": "Stat",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Stat.Status",
-            "id": 559,
+            "id": 564,
             "members": [
               {
-                "id": 557,
+                "id": 562,
                 "name": "POSTING",
                 "nodeType": "EnumValue",
                 "src": "119:7:4"
               },
               {
-                "id": 558,
+                "id": 563,
                 "name": "MATCHED",
                 "nodeType": "EnumValue",
                 "src": "128:7:4"
@@ -655,7 +655,7 @@
           },
           {
             "body": {
-              "id": 573,
+              "id": 578,
               "nodeType": "Block",
               "src": "240:48:4",
               "statements": [
@@ -663,24 +663,24 @@
                   "expression": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Status_$559",
+                      "typeIdentifier": "t_enum$_Status_$564",
                       "typeString": "enum Stat.Status"
                     },
-                    "id": 571,
+                    "id": 576,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 568,
+                      "id": 573,
                       "name": "status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 561,
+                      "referencedDeclaration": 566,
                       "src": "257:6:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$559",
+                        "typeIdentifier": "t_enum$_Status_$564",
                         "typeString": "enum Stat.Status"
                       }
                     },
@@ -690,18 +690,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 569,
+                        "id": 574,
                         "name": "Status",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 559,
+                        "referencedDeclaration": 564,
                         "src": "267:6:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Status_$559_$",
+                          "typeIdentifier": "t_type$_t_enum$_Status_$564_$",
                           "typeString": "type(enum Stat.Status)"
                         }
                       },
-                      "id": 570,
+                      "id": 575,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -711,7 +711,7 @@
                       "referencedDeclaration": null,
                       "src": "267:14:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$559",
+                        "typeIdentifier": "t_enum$_Status_$564",
                         "typeString": "enum Stat.Status"
                       }
                     },
@@ -721,29 +721,29 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 567,
-                  "id": 572,
+                  "functionReturnParameters": 572,
+                  "id": 577,
                   "nodeType": "Return",
                   "src": "250:31:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 574,
+            "id": 579,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 564,
+                "id": 569,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 563,
+                  "id": 568,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 286,
+                  "referencedDeclaration": 291,
                   "src": "216:9:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -757,31 +757,31 @@
             "name": "isPosting",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 562,
+              "id": 567,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 561,
+                  "id": 566,
                   "name": "status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 574,
+                  "scope": 579,
                   "src": "187:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Status_$559",
+                    "typeIdentifier": "t_enum$_Status_$564",
                     "typeString": "enum Stat.Status"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 560,
+                    "id": 565,
                     "name": "Status",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 559,
+                    "referencedDeclaration": 564,
                     "src": "187:6:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Status_$559",
+                      "typeIdentifier": "t_enum$_Status_$564",
                       "typeString": "enum Stat.Status"
                     }
                   },
@@ -793,15 +793,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 567,
+              "id": 572,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 566,
+                  "id": 571,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 574,
+                  "scope": 579,
                   "src": "235:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -810,7 +810,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 565,
+                    "id": 570,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "235:4:4",
@@ -825,7 +825,7 @@
               ],
               "src": "234:6:4"
             },
-            "scope": 590,
+            "scope": 595,
             "src": "168:120:4",
             "stateMutability": "view",
             "superFunction": null,
@@ -833,7 +833,7 @@
           },
           {
             "body": {
-              "id": 588,
+              "id": 593,
               "nodeType": "Block",
               "src": "365:48:4",
               "statements": [
@@ -841,24 +841,24 @@
                   "expression": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Status_$559",
+                      "typeIdentifier": "t_enum$_Status_$564",
                       "typeString": "enum Stat.Status"
                     },
-                    "id": 586,
+                    "id": 591,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 583,
+                      "id": 588,
                       "name": "status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 576,
+                      "referencedDeclaration": 581,
                       "src": "382:6:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$559",
+                        "typeIdentifier": "t_enum$_Status_$564",
                         "typeString": "enum Stat.Status"
                       }
                     },
@@ -868,18 +868,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 584,
+                        "id": 589,
                         "name": "Status",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 559,
+                        "referencedDeclaration": 564,
                         "src": "392:6:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Status_$559_$",
+                          "typeIdentifier": "t_type$_t_enum$_Status_$564_$",
                           "typeString": "type(enum Stat.Status)"
                         }
                       },
-                      "id": 585,
+                      "id": 590,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -889,7 +889,7 @@
                       "referencedDeclaration": null,
                       "src": "392:14:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$559",
+                        "typeIdentifier": "t_enum$_Status_$564",
                         "typeString": "enum Stat.Status"
                       }
                     },
@@ -899,29 +899,29 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 582,
-                  "id": 587,
+                  "functionReturnParameters": 587,
+                  "id": 592,
                   "nodeType": "Return",
                   "src": "375:31:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 589,
+            "id": 594,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 579,
+                "id": 584,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 578,
+                  "id": 583,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 286,
+                  "referencedDeclaration": 291,
                   "src": "341:9:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -935,31 +935,31 @@
             "name": "isMatched",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 577,
+              "id": 582,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 576,
+                  "id": 581,
                   "name": "status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 589,
+                  "scope": 594,
                   "src": "312:13:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Status_$559",
+                    "typeIdentifier": "t_enum$_Status_$564",
                     "typeString": "enum Stat.Status"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 575,
+                    "id": 580,
                     "name": "Status",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 559,
+                    "referencedDeclaration": 564,
                     "src": "312:6:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Status_$559",
+                      "typeIdentifier": "t_enum$_Status_$564",
                       "typeString": "enum Stat.Status"
                     }
                   },
@@ -971,15 +971,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 582,
+              "id": 587,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 581,
+                  "id": 586,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 589,
+                  "scope": 594,
                   "src": "360:4:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -988,7 +988,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 580,
+                    "id": 585,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "360:4:4",
@@ -1003,14 +1003,14 @@
               ],
               "src": "359:6:4"
             },
-            "scope": 590,
+            "scope": 595,
             "src": "293:120:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 591,
+        "scope": 596,
         "src": "50:365:4"
       }
     ],
@@ -1022,5 +1022,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2019-01-12T08:21:42.168Z"
+  "updatedAt": "2019-01-12T14:16:09.727Z"
 }

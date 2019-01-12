@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Link } from "react-router-dom"
+import { BrowserRouter, Route } from "react-router-dom"
 import PlatformContract from "./contracts/Platform.json";
 import getWeb3 from "./utils/getWeb3";
 import truffleContract from "truffle-contract";
@@ -44,7 +44,7 @@ class App extends Component {
     if(!this.state.web3) { return ( <div>Loading Web3...</div>); }
     const NavBarPage = (props) => { return ( <NavBar web3={this.state.web3} accounts={this.state.accounts} contract={this.state.contract} />); };
     const MyItemsPage = (props) => { return ( <MyItems  accounts={this.state.accounts} contract={this.state.contract} />); };
-    const MatchPage = (props) => { return ( <Match  accounts={this.state.accounts} contract={this.state.contract} id={props.match.params.itemid}/>); };
+    const MatchPage = (props) => { return ( <Match accounts={this.state.accounts} contract={this.state.contract} id={props.match.params.itemid}/>); };
     return (
       <BrowserRouter>
         <MuiThemeProvider>
@@ -52,7 +52,7 @@ class App extends Component {
             <Route path='/barter' render={NavBarPage}/>
             <Route exact path='/' component={HomePage} />
             <Route exact path='/barter/myitems' render={MyItemsPage} />
-            <Route exact path="/barter/match:itemid" render={MatchPage} /> 
+            <Route exact path="/barter/match/:itemid" render={MatchPage} /> 
           </div>
         </MuiThemeProvider>
       </BrowserRouter>

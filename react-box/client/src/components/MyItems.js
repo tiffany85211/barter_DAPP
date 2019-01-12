@@ -58,15 +58,22 @@ export default class MyItems extends Component {
 
 
     handleAddItem = async () => {
-        const items = this.state.items.slice();
-        const res = await this.state.contract.newItem(this.state.name, this.state.description, { from: this.state.accounts[0] });
-        const newItem = {
-          id: res.toNumber(),
-          name: this.state.name,
-          description: this.state.description
-        };
-        items.push(newItem);
-        this.setState({ items, name: '', description: '', open: false });
+        await this.state.contract.newItem(this.state.name, this.state.description, { from: this.state.accounts[0] });
+        const items = [];
+        var i;
+        const myItemList = await this.state.contract.listUserItem();
+        for(i = 0; i < myItemList.length; i++) {
+          var itemid = myItemList[i].words[0];
+          const res = await this.state.contract.getItem(itemid);
+          const newItem = {
+            id: itemid.toString(),
+            name: res[0].toString(),
+            description: res[1].toString()
+          };
+          items.push(newItem);
+        }
+        this.setState({ items });
+        this.setState({name: '', description: '', open: false });
     }
 
     handleClickAddItem() {
