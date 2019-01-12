@@ -3,8 +3,8 @@ import "./Items.sol";
 
 contract Platform is Items{
 
-    function newItem(string name, string description) external payable {
-        _createItem(name, description);
+    function newItem(string name, string description) external payable returns(uint) {
+        return _createItem(name, description);
     }
 
     function changeItem(uint id1, uint id2) external payable{
