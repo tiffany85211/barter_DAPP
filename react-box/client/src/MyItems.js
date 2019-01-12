@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PlatformContract from "./contracts/Platform.json";
 import getWeb3 from "./utils/getWeb3";
 import truffleContract from "truffle-contract";
+import ItemGrid from './ItemGrid';
 
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
@@ -38,11 +39,12 @@ export default class MyItems extends Component {
       // Stores a given value, 5 by default.
       await contract.newItem(this.state.name, this.state.description, { from: accounts[0] });
 
+      // const response = await contract.listUserItem();
+      // this.setState({ items: response.logs[0].args.val  });
       const response = await contract.getItem(this.state.name);
-
-      this.setState({ returnVal: response.toString()  });
-      // Get the value from the contract to prove it worked.
-      //const response = contract.();
+      
+      this.setState({returnVal : response[0].toString() });
+      // this.setState({ items: response.logs[0].args.val  });
     }
 
     handleClickAddItem() {
@@ -83,6 +85,12 @@ export default class MyItems extends Component {
         console.log(error);
       }
     };
+
+    renderList(i) {
+      return (
+        <ItemGrid key={i} id={i} item={this.state.items[i]} {...this.props} />
+      );
+    }
   
     render() {
       if (!this.state.web3) {
@@ -127,8 +135,12 @@ export default class MyItems extends Component {
               <Button onClick={this.handleClose} color="primary">Cancel</Button>
               <Button onClick={this.handleAddItem} color="primary">Add Item</Button>
             </DialogActions>
-        </Dialog>
-          <div>Name: {this.state.returnVal}</div>
+          </Dialog>
+          <div>
+            <ul className="item-list">
+              {this.state.items.map((item, i) => this.renderItem(i))}
+            </ul>
+          </div>
         </div>
       );
     }

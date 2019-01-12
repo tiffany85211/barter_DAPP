@@ -4,6 +4,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import { Route, Switch, Link } from 'react-router-dom';
 import RaisedButton from 'material-ui/RaisedButton';
 import MyItems from './MyItems';
+import Match from './Match';
 
 import "./App.css";
 
@@ -32,6 +33,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={renderHomePage} />
           <Route exact path="/myitems" component={MyItems} />
+          <Route exact path="/match" render={ props => <Match {...props}/>} />
         </Switch>
       </div>
     </MuiThemeProvider>

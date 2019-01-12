@@ -248,7 +248,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 555,
+                        "referencedDeclaration": 562,
                         "src": "345:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -555,10 +555,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        558,
-                        559
+                        565,
+                        566
                       ],
-                      "referencedDeclaration": 558,
+                      "referencedDeclaration": 565,
                       "src": "663:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -629,7 +629,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 555,
+                        "referencedDeclaration": 562,
                         "src": "841:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -1236,10 +1236,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        558,
-                        559
+                        565,
+                        566
                       ],
-                      "referencedDeclaration": 558,
+                      "referencedDeclaration": 565,
                       "src": "1731:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1610,7 +1610,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 555,
+                        "referencedDeclaration": 562,
                         "src": "345:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -1917,10 +1917,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        558,
-                        559
+                        565,
+                        566
                       ],
-                      "referencedDeclaration": 558,
+                      "referencedDeclaration": 565,
                       "src": "663:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1991,7 +1991,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 555,
+                        "referencedDeclaration": 562,
                         "src": "841:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -2598,10 +2598,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        558,
-                        559
+                        565,
+                        566
                       ],
-                      "referencedDeclaration": 558,
+                      "referencedDeclaration": 565,
                       "src": "1731:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2812,5 +2812,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2019-01-11T19:30:59.406Z"
+  "updatedAt": "2019-01-12T06:10:09.213Z"
 }
