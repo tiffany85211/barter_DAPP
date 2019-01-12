@@ -17,7 +17,9 @@ contract Platform is Items{
 
     function getItem(string name) external view returns (string, string) {
         for(uint i = 0; i < _items.length; i++) {
-            if(keccak256(abi.encodePacked(_items[i]._name)) == keccak256(abi.encodePacked(name))) {return (_items[i]._name, _items[i]._description); }
+            if(keccak256(abi.encodePacked(_items[i]._name)) == keccak256(abi.encodePacked(name))) {
+                return (_items[i]._name, _items[i]._description); 
+            }
         }
     }
 
@@ -27,5 +29,9 @@ contract Platform is Items{
     
     function getItem(uint i) external view returns (string memory, string memory) {
         return _item(i);
+    }
+
+    fuction listMatchItem() external view returns (uint[] memory) {
+        return _getMatchItem(msg.sender);
     }
 }
