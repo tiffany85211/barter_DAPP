@@ -31,10 +31,10 @@ export default class MyItems extends Component {
       try {
         const items = [];
         var i;
-        const myItemList = await this.state.contract.listUserItem();
+        const myItemList = await this.state.contract.listUserItem({from: this.state.accounts[0]});
           for(i = 0; i < myItemList.length; i++) {
             var itemid = myItemList[i].words[0];
-            const res = await this.state.contract.getItem(itemid);
+            const res = await this.state.contract.getItem(itemid.toString(), {from: this.state.accounts[0]});
             const newItem = {
               id: itemid.toString(),
               name: res[0].toString(),
@@ -52,19 +52,18 @@ export default class MyItems extends Component {
       this.setState({
         accounts: nextProps.accounts,  
         contract: nextProps.contract, 
-        web3: nextProps.web3 
       });
     }
 
 
     handleAddItem = async () => {
-        await this.state.contract.newItem(this.state.name, this.state.description, { from: this.state.accounts[0] });
+        await this.state.contract.newItem(this.state.name, this.state.description, {from: this.state.accounts[0] });
         const items = [];
         var i;
-        const myItemList = await this.state.contract.listUserItem();
+        const myItemList = await this.state.contract.listUserItem({from: this.state.accounts[0]});
         for(i = 0; i < myItemList.length; i++) {
           var itemid = myItemList[i].words[0];
-          const res = await this.state.contract.getItem(itemid);
+          const res = await this.state.contract.getItem(itemid.toString(), {from: this.state.accounts[0]});
           const newItem = {
             id: itemid.toString(),
             name: res[0].toString(),

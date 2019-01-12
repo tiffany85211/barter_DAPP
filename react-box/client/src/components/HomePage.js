@@ -11,7 +11,6 @@ class Homepage extends Component {
   }
 
   render() {
-    console.log(this.state.web3);
     return (
       <div>
         <Link to="/barter/myitems">

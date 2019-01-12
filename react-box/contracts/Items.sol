@@ -58,4 +58,16 @@ contract Items is Ownable, Stat{
             return ("", "");
         }
     }
+
+    function _getMatchItems(address user) internal view returns (uint[] memory) {
+        uint[] memory itemIds = new uint[](_items.length);
+        uint counter = 0;
+        for (uint i = 1; i < _items.length; i++) {
+            if (itemToOwner[i] != user && _items[i]._status == Status.POSTING) {
+                itemIds[counter] = i;
+                counter++;
+            }
+        }
+        return itemIds;
+    }
 }

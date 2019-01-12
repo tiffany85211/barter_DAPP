@@ -15,11 +15,13 @@ contract Platform is Items{
         return _listItems(msg.sender);
     }
 
-    // function getItem(string name) external view returns (string, string) {
-    //     for(uint i = 0; i < _items.length; i++) {
-    //         if(keccak256(abi.encodePacked(_items[i]._name)) == keccak256(abi.encodePacked(name))) {return (_items[i]._name, _items[i]._description); }
-    //     }
-    // }
+    function getItem(string name) external view returns (string, string) {
+        for(uint i = 0; i < _items.length; i++) {
+            if(keccak256(abi.encodePacked(_items[i]._name)) == keccak256(abi.encodePacked(name))) {
+                return (_items[i]._name, _items[i]._description); 
+            }
+        }
+    }
 
     function getSize() external view returns (uint)  {
         return _listSize();
@@ -27,5 +29,9 @@ contract Platform is Items{
     
     function getItem(uint i) external view returns (string memory, string memory) {
         return _item(i, msg.sender);
+    }
+
+    function listMatchItems() external view returns (uint[] memory) {
+        return _getMatchItems(msg.sender);
     }
 }
