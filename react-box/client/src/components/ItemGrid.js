@@ -12,11 +12,12 @@ export default class MyItems extends Component {
     render() {
         return (
           <div className="Item-Container">
+            <div> ID: {this.props.item.id} </div>
             <div> Name: {this.props.item.name} </div>
             <div> Description: {this.props.item.description} </div>
-            <Link to="/Match">
-              <RaisedButton label="GO" style={{ margin: 12 }} />
-            </Link>
+              <Link to="/barter/match" params={{ itemid: this.props.item.id }}  >
+                <RaisedButton label="GO" style={{ margin: 12 }} />
+              </Link>
             </div>
         );
       }

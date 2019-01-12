@@ -14,7 +14,7 @@ class Homepage extends Component {
     console.log(this.state.web3);
     return (
       <div>
-        <Link to="/MyItems">
+        <Link to="/barter/myitems">
           <RaisedButton label="START" style={{ margin: 12 }} />
         </Link>
       </div>

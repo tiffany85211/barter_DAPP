@@ -44,15 +44,15 @@ class App extends Component {
     if(!this.state.web3) { return ( <div>Loading Web3...</div>); }
     const NavBarPage = (props) => { return ( <NavBar web3={this.state.web3} accounts={this.state.accounts} contract={this.state.contract} />); };
     const MyItemsPage = (props) => { return ( <MyItems  accounts={this.state.accounts} contract={this.state.contract} />); };
-    const MatchPage = (props) => { return ( <Match  accounts={this.state.accounts} contract={this.state.contract} />); };
+    const MatchPage = (props) => { return ( <Match  accounts={this.state.accounts} contract={this.state.contract} id={props.match.params.itemid}/>); };
     return (
       <BrowserRouter>
         <MuiThemeProvider>
           <div className="App">
-            <Route path='/' render={NavBarPage}/>
+            <Route path='/barter' render={NavBarPage}/>
             <Route exact path='/' component={HomePage} />
-            <Route exact path='/MyItems' render={MyItemsPage} />
-            <Route exact path="/Match" render={MatchPage} /> 
+            <Route exact path='/barter/myitems' render={MyItemsPage} />
+            <Route exact path="/barter/match:itemid" render={MatchPage} /> 
           </div>
         </MuiThemeProvider>
       </BrowserRouter>

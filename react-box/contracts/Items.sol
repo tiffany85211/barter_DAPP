@@ -18,12 +18,12 @@ contract Items is Ownable, Stat{
     mapping (uint => address) public itemToOwner;
     mapping (address => uint) ownerItemCount;
 
-    function _createItem(string memory name, string memory description) internal {
+    function _createItem(string memory name, string memory description, address _owner) internal {
         if (_items.length == 0) 
             _items.push(Item("[None]", "[First null element]", 0, Status.POSTING));
         uint id = _items.push(Item(name, description, 0, Status.POSTING))-1;
-        itemToOwner[id] = msg.sender;
-        ownerItemCount[msg.sender] = ownerItemCount[msg.sender].add(1);
+        itemToOwner[id] = _owner;
+        ownerItemCount[_owner] = ownerItemCount[_owner].add(1);
     }
 
     function _changeWith(uint id1, uint id2) internal {
@@ -33,11 +33,13 @@ contract Items is Ownable, Stat{
         _items[id2]._status = Status.MATCHED;
     }
 
-    function _listItems() internal view returns (uint[] memory) {
-        uint[] storage itemIds;
+    function _listItems(address _owner) internal view returns (uint[]) {
+        uint[] memory itemIds = new uint[](ownerItemCount[_owner]);
+        uint counter = 0;
         for (uint i = 0; i < _items.length; i++) {
-            if (itemToOwner[i] == msg.sender && _items[i]._changeId == 0) {
-                itemIds.push(i);
+            if (itemToOwner[i] == _owner && _items[i]._changeId == 0) {
+                itemIds[counter] = i;
+                counter++;
             }
         }
         return itemIds;
@@ -47,7 +49,12 @@ contract Items is Ownable, Stat{
         return _items.length;
     }
 
-    function _item(uint i) internal view returns (string memory, string memory) {
-        return (_items[i]._name, _items[i]._description );
+    function _item(uint i, address _owner) internal view returns (string memory, string memory) {
+        if (_owner == itemToOwner[i] && _items[i]._status == Status.POSTING) {
+            return (_items[i]._name, _items[i]._description );
+        }
+        else {
+            return ("", "");
+        }
     }
 }
