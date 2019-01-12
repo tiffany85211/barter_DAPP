@@ -21,5 +21,11 @@ contract Platform is Items{
         }
     }
 
-
+    function getSize() external view returns (uint)  {
+        return _listSize();
+    }
+    
+    function getItem(uint i) external view returns (string memory, string memory) {
+        return _item(i);
+    }
 }
