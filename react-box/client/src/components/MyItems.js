@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import PlatformContract from "./contracts/Platform.json";
-import getWeb3 from "./utils/getWeb3";
-import truffleContract from "truffle-contract";
 import ItemGrid from './ItemGrid';
 
 import FloatingActionButton from 'material-ui/FloatingActionButton';
@@ -23,10 +20,8 @@ export default class MyItems extends Component {
         name: '',
         description: '',
         items: [],
-        web3: null, 
-        accounts: null, 
-        contract: null,
-        returnVal: '',
+        accounts: this.props.accounts,
+        contract: this.props.contract,
       };
       this.handleClickAddItem = this.handleClickAddItem.bind(this);
       this.handleClose = this.handleClose.bind(this);
@@ -34,52 +29,49 @@ export default class MyItems extends Component {
 
     componentDidMount = async () => {
       try {
-        // Get network provider and web3 instance.
-        const web3 = await getWeb3();
-  
-        // Use web3 to get the user's accounts.
-        const accounts = await web3.eth.getAccounts();
-  
-        // Get the contract instance.
-        const Contract = truffleContract(PlatformContract);
-        Contract.setProvider(web3.currentProvider);
-        const instance = await Contract.deployed();
-  
-        // Set web3, accounts, and contract to the state, and then proceed with an
-        // example of interacting with the contract's methods.
-        this.setState({ web3, accounts, contract: instance });
+        const items = [];
+        var i;
+        const myItemList = await this.state.contract.listUserItem();
+          for(i = 0; i < myItemList.length; i++) {
+            var l = myItemList[i].words[0];
+            const res = await this.state.contract.getItem(l);
+            const newItem = {
+              name: res[0].toString(),
+              description: res[1].toString()
+            };
+            items.push(newItem);
+          }
+          this.setState({ items });
       } catch (error) {
-        // Catch any errors for any of the above operations.
-        alert(
-          `Failed to load web3, accounts, or contract. Check console for details.`
-        );
         console.log(error);
       }
     };
 
-    handleAddItem = async () => {
-      this.setState({ open: false });
-      const { accounts, contract } = this.state;
-  
-      // Stores a given value, 5 by default.
-      await contract.newItem(this.state.name, this.state.description, { from: accounts[0] });
+    componentWillReceiveProps(nextProps) {
+      this.setState({
+        accounts: nextProps.accounts,  
+        contract: nextProps.contract, 
+        web3: nextProps.web3 
+      });
+    }
 
-      const items = [];
-      const size = await contract.getSize();
-      var i;
-      for(i = 1; i <= size.toNumber(); i++) {
-        const response = await contract.getItem(i.toString());
-        console.log(response[0].toString());
-        if(response[0].toString() !== "") {
-          console.log(i);
-          const item = {
-            name: response[0].toString,
-            description: response[1].toString,
-          };
-          items.push(item);
-        }
-      }
-      this.setState({ items });
+
+    handleAddItem = async () => {
+        const items = [];
+        var i;
+          await this.state.contract.newItem(this.state.name, this.state.description, { from: this.state.accounts[0] });
+          const myItemList = await this.state.contract.listUserItem();
+          for(i = 0; i < myItemList.length; i++) {
+            var l = myItemList[i].words[0];
+            const res = await this.state.contract.getItem(l);
+            const newItem = {
+              name: res[0].toString(),
+              description: res[1].toString()
+            };
+            items.push(newItem);
+          }
+          this.setState({ items });
+        this.setState({name: '', description: '', open: false });
     }
 
     handleClickAddItem() {
@@ -98,17 +90,11 @@ export default class MyItems extends Component {
 
     renderItem(i) {
       return (
-        <div>
-          <div> Name: {this.state.items[i].name} </div>
-          <div> Description: {this.state.items[i].description} </div>
-       </div>
+        <ItemGrid key={i} id={i} item={this.state.items[i]} />
       );
     }
   
     render() {
-      if (!this.state.web3) {
-        return <div>Loading Web3, accounts, and contract...</div>;
-      }
       return (
         <div className="App">
           <div className="add-item">

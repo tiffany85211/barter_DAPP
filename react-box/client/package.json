@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.8.3",
+    "babel-polyfill": "^6.26.0",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.2.1",
     "concurrently": "^4.1.0",
@@ -43,5 +44,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0"
+  }
 }
