@@ -32,35 +32,6 @@ export default class MyItems extends Component {
       this.handleClose = this.handleClose.bind(this);
     }
 
-    handleAddItem = async () => {
-      this.setState({ open: false });
-      const { accounts, contract } = this.state;
-  
-      // Stores a given value, 5 by default.
-      await contract.newItem(this.state.name, this.state.description, { from: accounts[0] });
-
-      // const response = await contract.listUserItem();
-      // this.setState({ items: response.logs[0].args.val  });
-      const response = await contract.getItem(this.state.name);
-      
-      this.setState({returnVal : response[0].toString() });
-      // this.setState({ items: response.logs[0].args.val  });
-    }
-
-    handleClickAddItem() {
-      this.setState({ open: true });
-    }
-
-    handleClose() {
-      this.setState({ open: false });
-    };
-  
-    handleChange = name => event => {
-      this.setState({
-        [name]: event.target.value,
-      });
-    };
-
     componentDidMount = async () => {
       try {
         // Get network provider and web3 instance.
@@ -86,9 +57,51 @@ export default class MyItems extends Component {
       }
     };
 
-    renderList(i) {
+    handleAddItem = async () => {
+      this.setState({ open: false });
+      const { accounts, contract } = this.state;
+  
+      // Stores a given value, 5 by default.
+      await contract.newItem(this.state.name, this.state.description, { from: accounts[0] });
+
+      const items = [];
+      const size = await contract.getSize();
+      var i;
+      for(i = 1; i <= size.toNumber(); i++) {
+        const response = await contract.getItem(i.toString());
+        console.log(response[0].toString());
+        if(response[0].toString() !== "") {
+          console.log(i);
+          const item = {
+            name: response[0].toString,
+            description: response[1].toString,
+          };
+          items.push(item);
+        }
+      }
+      this.setState({ items });
+    }
+
+    handleClickAddItem() {
+      this.setState({ open: true });
+    }
+
+    handleClose() {
+      this.setState({ open: false });
+    };
+  
+    handleChange = name => event => {
+      this.setState({
+        [name]: event.target.value,
+      });
+    };
+
+    renderItem(i) {
       return (
-        <ItemGrid key={i} id={i} item={this.state.items[i]} {...this.props} />
+        <div>
+          <div> Name: {this.state.items[i].name} </div>
+          <div> Description: {this.state.items[i].description} </div>
+       </div>
       );
     }
   
@@ -140,6 +153,7 @@ export default class MyItems extends Component {
             <ul className="item-list">
               {this.state.items.map((item, i) => this.renderItem(i))}
             </ul>
+            <div> Items size: {this.state.items.length}</div>
           </div>
         </div>
       );
