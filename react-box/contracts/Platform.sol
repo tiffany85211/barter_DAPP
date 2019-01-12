@@ -31,7 +31,7 @@ contract Platform is Items{
         return _item(i);
     }
 
-    fuction listMatchItem() external view returns (uint[] memory) {
+    function listMatchItem() external view returns (uint[] memory) {
         return _getMatchItem(msg.sender);
     }
 }
