@@ -156,7 +156,6 @@ export default class MyItems extends Component {
             </DialogActions>
           </Dialog>
           <div>
-            <ButtonBases/>
             <ul className="item-list">
               {this.state.items.map((item, i) => this.renderItem(i))}
             </ul>

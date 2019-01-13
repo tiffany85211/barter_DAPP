@@ -1,8 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
+import React, { Component } from "react";
+import { Link } from 'react-router-dom';
+import RaisedButton from 'material-ui/RaisedButton';
 
 const styles = theme => ({
   root: {
@@ -81,17 +83,22 @@ const images = [
   {
     url: '/static/images/grid-list/breakfast.jpg',
     title: 'Breakfast',
-    width: '40%',
+    width: '33.3333333333%',
   },
   {
     url: '/static/images/grid-list/burgers.jpg',
     title: 'Burgers',
-    width: '30%',
+    width: '33.3333333333%',
   },
   {
     url: '/static/images/grid-list/camera.jpg',
     title: 'Camera',
-    width: '30%',
+    width: '33.3333333333%',
+  },
+  {
+    url: '/static/images/grid-list/camera.jpg',
+    title: 'Camera',
+    width: '33.3333333333%',
   },
 ];
 
