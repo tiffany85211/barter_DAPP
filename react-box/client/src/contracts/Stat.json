@@ -108,41 +108,41 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x6080604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a36104ef806100cf6000396000f300608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631a614f081461007d5780631c4aedcb146100c5578063715018a61461010d5780638da5cb5b146101245780638f32d59b1461017b578063f2fde38b146101aa575b600080fd5b34801561008957600080fd5b506100ab600480360381019080803560ff1690602001909291905050506101ed565b604051808215151515815260200191505060405180910390f35b3480156100d157600080fd5b506100f3600480360381019080803560ff169060200190929190505050610223565b604051808215151515815260200191505060405180910390f35b34801561011957600080fd5b50610122610258565b005b34801561013057600080fd5b5061013961032a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561018757600080fd5b50610190610353565b604051808215151515815260200191505060405180910390f35b3480156101b657600080fd5b506101eb600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103aa565b005b60006101f7610353565b151561020257600080fd5b6000600181111561020f57fe5b82600181111561021b57fe5b149050919050565b600061022d610353565b151561023857600080fd5b60018081111561024457fe5b82600181111561025057fe5b149050919050565b610260610353565b151561026b57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b6103b2610353565b15156103bd57600080fd5b6103c6816103c9565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561040557600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a723058201d0da09d127b6caaa23ff0700fcfed173fc4145507a7f296b25461c2c871a47d0029",
-  "deployedBytecode": "0x608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631a614f081461007d5780631c4aedcb146100c5578063715018a61461010d5780638da5cb5b146101245780638f32d59b1461017b578063f2fde38b146101aa575b600080fd5b34801561008957600080fd5b506100ab600480360381019080803560ff1690602001909291905050506101ed565b604051808215151515815260200191505060405180910390f35b3480156100d157600080fd5b506100f3600480360381019080803560ff169060200190929190505050610223565b604051808215151515815260200191505060405180910390f35b34801561011957600080fd5b50610122610258565b005b34801561013057600080fd5b5061013961032a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561018757600080fd5b50610190610353565b604051808215151515815260200191505060405180910390f35b3480156101b657600080fd5b506101eb600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103aa565b005b60006101f7610353565b151561020257600080fd5b6000600181111561020f57fe5b82600181111561021b57fe5b149050919050565b600061022d610353565b151561023857600080fd5b60018081111561024457fe5b82600181111561025057fe5b149050919050565b610260610353565b151561026b57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b6103b2610353565b15156103bd57600080fd5b6103c6816103c9565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561040557600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a723058201d0da09d127b6caaa23ff0700fcfed173fc4145507a7f296b25461c2c871a47d0029",
-  "sourceMap": "50:365:4:-;;;345:10:1;336:6;;:19;;;;;;;;;;;;;;;;;;403:6;;;;;;;;;;;370:40;;399:1;370:40;;;;;;;;;;;;50:365:4;;;;;;",
-  "deployedSourceMap": "50:365:4:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;168:120;;8:9:-1;5:2;;;30:1;27;20:12;5:2;168:120:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;293;;8:9:-1;5:2;;;30:1;27;20:12;5:2;293:120:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1129:137:1;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1129:137:1;;;;;;476:76;;8:9:-1;5:2;;;30:1;27;20:12;5:2;476:76:1;;;;;;;;;;;;;;;;;;;;;;;;;;;779:89;;8:9:-1;5:2;;;30:1;27;20:12;5:2;779:89:1;;;;;;;;;;;;;;;;;;;;;;;;;;;1426:107;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1426:107:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;168:120:4;235:4;671:9:1;:7;:9::i;:::-;663:18;;;;;;;;267:14:4;257:24;;;;;;;;:6;:24;;;;;;;;;250:31;;168:120;;;:::o;293:::-;360:4;671:9:1;:7;:9::i;:::-;663:18;;;;;;;;392:14:4;382:24;;;;;;;;:6;:24;;;;;;;;;375:31;;293:120;;;:::o;1129:137:1:-;671:9;:7;:9::i;:::-;663:18;;;;;;;;1227:1;1190:40;;1211:6;;;;;;;;;;;1190:40;;;;;;;;;;;;1257:1;1240:6;;:19;;;;;;;;;;;;;;;;;;1129:137::o;476:76::-;513:7;539:6;;;;;;;;;;;532:13;;476:76;:::o;779:89::-;818:4;855:6;;;;;;;;;;;841:20;;:10;:20;;;834:27;;779:89;:::o;1426:107::-;671:9;:7;:9::i;:::-;663:18;;;;;;;;1498:28;1517:8;1498:18;:28::i;:::-;1426:107;:::o;1666:183::-;1759:1;1739:22;;:8;:22;;;;1731:31;;;;;;;;1806:8;1777:38;;1798:6;;;;;;;;;;;1777:38;;;;;;;;;;;;1834:8;1825:6;;:17;;;;;;;;;;;;;;;;;;1666:183;:::o",
-  "source": "pragma solidity ^0.4.24;\nimport \"./Ownable.sol\";\n\ncontract Stat is Ownable {\n    \n    //define Status\n    enum Status {POSTING, MATCHED}\n\n    //function for status\n    function isPosting(Status status) external view onlyOwner returns (bool){\n        return status == Status.POSTING;\n    }\n    function isMatched(Status status) external view onlyOwner returns (bool){\n        return status == Status.MATCHED;\n    }\n}",
-  "sourcePath": "/Users/kouniwa/Desktop/bello/NMLab/barter_DAPP/react-box/contracts/Status.sol",
+  "bytecode": "0x6080604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3610519806100cf6000396000f3fe608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631a614f081461007d5780631c4aedcb146100d3578063715018a6146101295780638da5cb5b146101405780638f32d59b14610197578063f2fde38b146101c6575b600080fd5b34801561008957600080fd5b506100b9600480360360208110156100a057600080fd5b81019080803560ff169060200190929190505050610217565b604051808215151515815260200191505060405180910390f35b3480156100df57600080fd5b5061010f600480360360208110156100f657600080fd5b81019080803560ff16906020019092919050505061024d565b604051808215151515815260200191505060405180910390f35b34801561013557600080fd5b5061013e610282565b005b34801561014c57600080fd5b50610155610354565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101a357600080fd5b506101ac61037d565b604051808215151515815260200191505060405180910390f35b3480156101d257600080fd5b50610215600480360360208110156101e957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103d4565b005b600061022161037d565b151561022c57600080fd5b6000600181111561023957fe5b82600181111561024557fe5b149050919050565b600061025761037d565b151561026257600080fd5b60018081111561026e57fe5b82600181111561027a57fe5b149050919050565b61028a61037d565b151561029557600080fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b6103dc61037d565b15156103e757600080fd5b6103f0816103f3565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561042f57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fea165627a7a72305820450b35f8f2ed16beba0debac2512e7b8b1d5659701303cc40ef2757d80c50eb50029",
+  "deployedBytecode": "0x608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631a614f081461007d5780631c4aedcb146100d3578063715018a6146101295780638da5cb5b146101405780638f32d59b14610197578063f2fde38b146101c6575b600080fd5b34801561008957600080fd5b506100b9600480360360208110156100a057600080fd5b81019080803560ff169060200190929190505050610217565b604051808215151515815260200191505060405180910390f35b3480156100df57600080fd5b5061010f600480360360208110156100f657600080fd5b81019080803560ff16906020019092919050505061024d565b604051808215151515815260200191505060405180910390f35b34801561013557600080fd5b5061013e610282565b005b34801561014c57600080fd5b50610155610354565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101a357600080fd5b506101ac61037d565b604051808215151515815260200191505060405180910390f35b3480156101d257600080fd5b50610215600480360360208110156101e957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103d4565b005b600061022161037d565b151561022c57600080fd5b6000600181111561023957fe5b82600181111561024557fe5b149050919050565b600061025761037d565b151561026257600080fd5b60018081111561026e57fe5b82600181111561027a57fe5b149050919050565b61028a61037d565b151561029557600080fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614905090565b6103dc61037d565b15156103e757600080fd5b6103f0816103f3565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561042f57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fea165627a7a72305820450b35f8f2ed16beba0debac2512e7b8b1d5659701303cc40ef2757d80c50eb50029",
+  "sourceMap": "49:365:6:-;;;344:10:2;335:6;;:19;;;;;;;;;;;;;;;;;;402:6;;;;;;;;;;;369:40;;398:1;369:40;;;;;;;;;;;;49:365:6;;;;;;",
+  "deployedSourceMap": "49:365:6:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;167:120;;8:9:-1;5:2;;;30:1;27;20:12;5:2;167:120:6;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;167:120:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;292;;8:9:-1;5:2;;;30:1;27;20:12;5:2;292:120:6;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;292:120:6;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1128:137:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1128:137:2;;;;;;475:76;;8:9:-1;5:2;;;30:1;27;20:12;5:2;475:76:2;;;;;;;;;;;;;;;;;;;;;;;;;;;778:89;;8:9:-1;5:2;;;30:1;27;20:12;5:2;778:89:2;;;;;;;;;;;;;;;;;;;;;;;;;;;1425:107;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1425:107:2;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1425:107:2;;;;;;;;;;;;;;;;;;;;;;167:120:6;234:4;670:9:2;:7;:9::i;:::-;662:18;;;;;;;;266:14:6;256:24;;;;;;;;:6;:24;;;;;;;;;249:31;;167:120;;;:::o;292:::-;359:4;670:9:2;:7;:9::i;:::-;662:18;;;;;;;;391:14:6;381:24;;;;;;;;:6;:24;;;;;;;;;374:31;;292:120;;;:::o;1128:137:2:-;670:9;:7;:9::i;:::-;662:18;;;;;;;;1226:1;1189:40;;1210:6;;;;;;;;;;;1189:40;;;;;;;;;;;;1256:1;1239:6;;:19;;;;;;;;;;;;;;;;;;1128:137::o;475:76::-;512:7;538:6;;;;;;;;;;;531:13;;475:76;:::o;778:89::-;817:4;854:6;;;;;;;;;;;840:20;;:10;:20;;;833:27;;778:89;:::o;1425:107::-;670:9;:7;:9::i;:::-;662:18;;;;;;;;1497:28;1516:8;1497:18;:28::i;:::-;1425:107;:::o;1665:183::-;1758:1;1738:22;;:8;:22;;;;1730:31;;;;;;;;1805:8;1776:38;;1797:6;;;;;;;;;;;1776:38;;;;;;;;;;;;1833:8;1824:6;;:17;;;;;;;;;;;;;;;;;;1665:183;:::o",
+  "source": "pragma solidity ^0.5.0;\nimport \"./Ownable.sol\";\n\ncontract Stat is Ownable {\n    \n    //define Status\n    enum Status {POSTING, MATCHED}\n\n    //function for status\n    function isPosting(Status status) external view onlyOwner returns (bool){\n        return status == Status.POSTING;\n    }\n    function isMatched(Status status) external view onlyOwner returns (bool){\n        return status == Status.MATCHED;\n    }\n}",
+  "sourcePath": "/home/tpemist/Desktop/clone/barter_DAPP/react-box/contracts/Status.sol",
   "ast": {
-    "absolutePath": "/Users/kouniwa/Desktop/bello/NMLab/barter_DAPP/react-box/contracts/Status.sol",
+    "absolutePath": "/home/tpemist/Desktop/clone/barter_DAPP/react-box/contracts/Status.sol",
     "exportedSymbols": {
       "Stat": [
-        721
+        801
       ]
     },
-    "id": 722,
+    "id": 802,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 684,
+        "id": 764,
         "literals": [
           "solidity",
           "^",
-          "0.4",
-          ".24"
+          "0.5",
+          ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:4"
+        "src": "0:23:6"
       },
       {
-        "absolutePath": "/Users/kouniwa/Desktop/bello/NMLab/barter_DAPP/react-box/contracts/Ownable.sol",
+        "absolutePath": "/home/tpemist/Desktop/clone/barter_DAPP/react-box/contracts/Ownable.sol",
         "file": "./Ownable.sol",
-        "id": 685,
+        "id": 765,
         "nodeType": "ImportDirective",
-        "scope": 722,
-        "sourceUnit": 421,
-        "src": "25:23:4",
+        "scope": 802,
+        "sourceUnit": 478,
+        "src": "24:23:6",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -152,84 +152,84 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 686,
+              "id": 766,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 420,
-              "src": "67:7:4",
+              "referencedDeclaration": 477,
+              "src": "66:7:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$420",
+                "typeIdentifier": "t_contract$_Ownable_$477",
                 "typeString": "contract Ownable"
               }
             },
-            "id": 687,
+            "id": 767,
             "nodeType": "InheritanceSpecifier",
-            "src": "67:7:4"
+            "src": "66:7:6"
           }
         ],
         "contractDependencies": [
-          420
+          477
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 721,
+        "id": 801,
         "linearizedBaseContracts": [
-          721,
-          420
+          801,
+          477
         ],
         "name": "Stat",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Stat.Status",
-            "id": 690,
+            "id": 770,
             "members": [
               {
-                "id": 688,
+                "id": 768,
                 "name": "POSTING",
                 "nodeType": "EnumValue",
-                "src": "119:7:4"
+                "src": "118:7:6"
               },
               {
-                "id": 689,
+                "id": 769,
                 "name": "MATCHED",
                 "nodeType": "EnumValue",
-                "src": "128:7:4"
+                "src": "127:7:6"
               }
             ],
             "name": "Status",
             "nodeType": "EnumDefinition",
-            "src": "106:30:4"
+            "src": "105:30:6"
           },
           {
             "body": {
-              "id": 704,
+              "id": 784,
               "nodeType": "Block",
-              "src": "240:48:4",
+              "src": "239:48:6",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Status_$690",
+                      "typeIdentifier": "t_enum$_Status_$770",
                       "typeString": "enum Stat.Status"
                     },
-                    "id": 702,
+                    "id": 782,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 699,
+                      "id": 779,
                       "name": "status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 692,
-                      "src": "257:6:4",
+                      "referencedDeclaration": 772,
+                      "src": "256:6:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$690",
+                        "typeIdentifier": "t_enum$_Status_$770",
                         "typeString": "enum Stat.Status"
                       }
                     },
@@ -239,18 +239,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 700,
+                        "id": 780,
                         "name": "Status",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 690,
-                        "src": "267:6:4",
+                        "referencedDeclaration": 770,
+                        "src": "266:6:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Status_$690_$",
+                          "typeIdentifier": "t_type$_t_enum$_Status_$770_$",
                           "typeString": "type(enum Stat.Status)"
                         }
                       },
-                      "id": 701,
+                      "id": 781,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -258,79 +258,78 @@
                       "memberName": "POSTING",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "267:14:4",
+                      "src": "266:14:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$690",
+                        "typeIdentifier": "t_enum$_Status_$770",
                         "typeString": "enum Stat.Status"
                       }
                     },
-                    "src": "257:24:4",
+                    "src": "256:24:6",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 698,
-                  "id": 703,
+                  "functionReturnParameters": 778,
+                  "id": 783,
                   "nodeType": "Return",
-                  "src": "250:31:4"
+                  "src": "249:31:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 705,
+            "id": 785,
             "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": true,
+            "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 695,
+                "id": 775,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 694,
+                  "id": 774,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 354,
-                  "src": "216:9:4",
+                  "referencedDeclaration": 411,
+                  "src": "215:9:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "216:9:4"
+                "src": "215:9:6"
               }
             ],
             "name": "isPosting",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 693,
+              "id": 773,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 692,
+                  "id": 772,
                   "name": "status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 705,
-                  "src": "187:13:4",
+                  "scope": 785,
+                  "src": "186:13:6",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Status_$690",
+                    "typeIdentifier": "t_enum$_Status_$770",
                     "typeString": "enum Stat.Status"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 691,
+                    "id": 771,
                     "name": "Status",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 690,
-                    "src": "187:6:4",
+                    "referencedDeclaration": 770,
+                    "src": "186:6:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Status_$690",
+                      "typeIdentifier": "t_enum$_Status_$770",
                       "typeString": "enum Stat.Status"
                     }
                   },
@@ -338,20 +337,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "186:15:4"
+              "src": "185:15:6"
             },
-            "payable": false,
             "returnParameters": {
-              "id": 698,
+              "id": 778,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 697,
+                  "id": 777,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 705,
-                  "src": "235:4:4",
+                  "scope": 785,
+                  "src": "234:4:6",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -359,10 +357,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 696,
+                    "id": 776,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "235:4:4",
+                    "src": "234:4:6",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -372,42 +370,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "234:6:4"
+              "src": "233:6:6"
             },
-            "scope": 721,
-            "src": "168:120:4",
+            "scope": 801,
+            "src": "167:120:6",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 719,
+              "id": 799,
               "nodeType": "Block",
-              "src": "365:48:4",
+              "src": "364:48:6",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Status_$690",
+                      "typeIdentifier": "t_enum$_Status_$770",
                       "typeString": "enum Stat.Status"
                     },
-                    "id": 717,
+                    "id": 797,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 714,
+                      "id": 794,
                       "name": "status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 707,
-                      "src": "382:6:4",
+                      "referencedDeclaration": 787,
+                      "src": "381:6:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$690",
+                        "typeIdentifier": "t_enum$_Status_$770",
                         "typeString": "enum Stat.Status"
                       }
                     },
@@ -417,18 +415,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 715,
+                        "id": 795,
                         "name": "Status",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 690,
-                        "src": "392:6:4",
+                        "referencedDeclaration": 770,
+                        "src": "391:6:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Status_$690_$",
+                          "typeIdentifier": "t_type$_t_enum$_Status_$770_$",
                           "typeString": "type(enum Stat.Status)"
                         }
                       },
-                      "id": 716,
+                      "id": 796,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -436,79 +434,78 @@
                       "memberName": "MATCHED",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "392:14:4",
+                      "src": "391:14:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$690",
+                        "typeIdentifier": "t_enum$_Status_$770",
                         "typeString": "enum Stat.Status"
                       }
                     },
-                    "src": "382:24:4",
+                    "src": "381:24:6",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 713,
-                  "id": 718,
+                  "functionReturnParameters": 793,
+                  "id": 798,
                   "nodeType": "Return",
-                  "src": "375:31:4"
+                  "src": "374:31:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 720,
+            "id": 800,
             "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": true,
+            "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 710,
+                "id": 790,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 709,
+                  "id": 789,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 354,
-                  "src": "341:9:4",
+                  "referencedDeclaration": 411,
+                  "src": "340:9:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "341:9:4"
+                "src": "340:9:6"
               }
             ],
             "name": "isMatched",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 708,
+              "id": 788,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 707,
+                  "id": 787,
                   "name": "status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 720,
-                  "src": "312:13:4",
+                  "scope": 800,
+                  "src": "311:13:6",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Status_$690",
+                    "typeIdentifier": "t_enum$_Status_$770",
                     "typeString": "enum Stat.Status"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 706,
+                    "id": 786,
                     "name": "Status",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 690,
-                    "src": "312:6:4",
+                    "referencedDeclaration": 770,
+                    "src": "311:6:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Status_$690",
+                      "typeIdentifier": "t_enum$_Status_$770",
                       "typeString": "enum Stat.Status"
                     }
                   },
@@ -516,20 +513,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "311:15:4"
+              "src": "310:15:6"
             },
-            "payable": false,
             "returnParameters": {
-              "id": 713,
+              "id": 793,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 712,
+                  "id": 792,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 720,
-                  "src": "360:4:4",
+                  "scope": 800,
+                  "src": "359:4:6",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -537,10 +533,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 711,
+                    "id": 791,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "360:4:4",
+                    "src": "359:4:6",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -550,50 +546,50 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "359:6:4"
+              "src": "358:6:6"
             },
-            "scope": 721,
-            "src": "293:120:4",
+            "scope": 801,
+            "src": "292:120:6",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 722,
-        "src": "50:365:4"
+        "scope": 802,
+        "src": "49:365:6"
       }
     ],
-    "src": "0:415:4"
+    "src": "0:414:6"
   },
   "legacyAST": {
-    "absolutePath": "/Users/kouniwa/Desktop/bello/NMLab/barter_DAPP/react-box/contracts/Status.sol",
+    "absolutePath": "/home/tpemist/Desktop/clone/barter_DAPP/react-box/contracts/Status.sol",
     "exportedSymbols": {
       "Stat": [
-        721
+        801
       ]
     },
-    "id": 722,
+    "id": 802,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 684,
+        "id": 764,
         "literals": [
           "solidity",
           "^",
-          "0.4",
-          ".24"
+          "0.5",
+          ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:4"
+        "src": "0:23:6"
       },
       {
-        "absolutePath": "/Users/kouniwa/Desktop/bello/NMLab/barter_DAPP/react-box/contracts/Ownable.sol",
+        "absolutePath": "/home/tpemist/Desktop/clone/barter_DAPP/react-box/contracts/Ownable.sol",
         "file": "./Ownable.sol",
-        "id": 685,
+        "id": 765,
         "nodeType": "ImportDirective",
-        "scope": 722,
-        "sourceUnit": 421,
-        "src": "25:23:4",
+        "scope": 802,
+        "sourceUnit": 478,
+        "src": "24:23:6",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -603,84 +599,84 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 686,
+              "id": 766,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 420,
-              "src": "67:7:4",
+              "referencedDeclaration": 477,
+              "src": "66:7:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$420",
+                "typeIdentifier": "t_contract$_Ownable_$477",
                 "typeString": "contract Ownable"
               }
             },
-            "id": 687,
+            "id": 767,
             "nodeType": "InheritanceSpecifier",
-            "src": "67:7:4"
+            "src": "66:7:6"
           }
         ],
         "contractDependencies": [
-          420
+          477
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 721,
+        "id": 801,
         "linearizedBaseContracts": [
-          721,
-          420
+          801,
+          477
         ],
         "name": "Stat",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Stat.Status",
-            "id": 690,
+            "id": 770,
             "members": [
               {
-                "id": 688,
+                "id": 768,
                 "name": "POSTING",
                 "nodeType": "EnumValue",
-                "src": "119:7:4"
+                "src": "118:7:6"
               },
               {
-                "id": 689,
+                "id": 769,
                 "name": "MATCHED",
                 "nodeType": "EnumValue",
-                "src": "128:7:4"
+                "src": "127:7:6"
               }
             ],
             "name": "Status",
             "nodeType": "EnumDefinition",
-            "src": "106:30:4"
+            "src": "105:30:6"
           },
           {
             "body": {
-              "id": 704,
+              "id": 784,
               "nodeType": "Block",
-              "src": "240:48:4",
+              "src": "239:48:6",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Status_$690",
+                      "typeIdentifier": "t_enum$_Status_$770",
                       "typeString": "enum Stat.Status"
                     },
-                    "id": 702,
+                    "id": 782,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 699,
+                      "id": 779,
                       "name": "status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 692,
-                      "src": "257:6:4",
+                      "referencedDeclaration": 772,
+                      "src": "256:6:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$690",
+                        "typeIdentifier": "t_enum$_Status_$770",
                         "typeString": "enum Stat.Status"
                       }
                     },
@@ -690,18 +686,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 700,
+                        "id": 780,
                         "name": "Status",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 690,
-                        "src": "267:6:4",
+                        "referencedDeclaration": 770,
+                        "src": "266:6:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Status_$690_$",
+                          "typeIdentifier": "t_type$_t_enum$_Status_$770_$",
                           "typeString": "type(enum Stat.Status)"
                         }
                       },
-                      "id": 701,
+                      "id": 781,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -709,79 +705,78 @@
                       "memberName": "POSTING",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "267:14:4",
+                      "src": "266:14:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$690",
+                        "typeIdentifier": "t_enum$_Status_$770",
                         "typeString": "enum Stat.Status"
                       }
                     },
-                    "src": "257:24:4",
+                    "src": "256:24:6",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 698,
-                  "id": 703,
+                  "functionReturnParameters": 778,
+                  "id": 783,
                   "nodeType": "Return",
-                  "src": "250:31:4"
+                  "src": "249:31:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 705,
+            "id": 785,
             "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": true,
+            "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 695,
+                "id": 775,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 694,
+                  "id": 774,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 354,
-                  "src": "216:9:4",
+                  "referencedDeclaration": 411,
+                  "src": "215:9:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "216:9:4"
+                "src": "215:9:6"
               }
             ],
             "name": "isPosting",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 693,
+              "id": 773,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 692,
+                  "id": 772,
                   "name": "status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 705,
-                  "src": "187:13:4",
+                  "scope": 785,
+                  "src": "186:13:6",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Status_$690",
+                    "typeIdentifier": "t_enum$_Status_$770",
                     "typeString": "enum Stat.Status"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 691,
+                    "id": 771,
                     "name": "Status",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 690,
-                    "src": "187:6:4",
+                    "referencedDeclaration": 770,
+                    "src": "186:6:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Status_$690",
+                      "typeIdentifier": "t_enum$_Status_$770",
                       "typeString": "enum Stat.Status"
                     }
                   },
@@ -789,20 +784,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "186:15:4"
+              "src": "185:15:6"
             },
-            "payable": false,
             "returnParameters": {
-              "id": 698,
+              "id": 778,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 697,
+                  "id": 777,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 705,
-                  "src": "235:4:4",
+                  "scope": 785,
+                  "src": "234:4:6",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -810,10 +804,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 696,
+                    "id": 776,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "235:4:4",
+                    "src": "234:4:6",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -823,42 +817,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "234:6:4"
+              "src": "233:6:6"
             },
-            "scope": 721,
-            "src": "168:120:4",
+            "scope": 801,
+            "src": "167:120:6",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 719,
+              "id": 799,
               "nodeType": "Block",
-              "src": "365:48:4",
+              "src": "364:48:6",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
                     "commonType": {
-                      "typeIdentifier": "t_enum$_Status_$690",
+                      "typeIdentifier": "t_enum$_Status_$770",
                       "typeString": "enum Stat.Status"
                     },
-                    "id": 717,
+                    "id": 797,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 714,
+                      "id": 794,
                       "name": "status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 707,
-                      "src": "382:6:4",
+                      "referencedDeclaration": 787,
+                      "src": "381:6:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$690",
+                        "typeIdentifier": "t_enum$_Status_$770",
                         "typeString": "enum Stat.Status"
                       }
                     },
@@ -868,18 +862,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 715,
+                        "id": 795,
                         "name": "Status",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 690,
-                        "src": "392:6:4",
+                        "referencedDeclaration": 770,
+                        "src": "391:6:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Status_$690_$",
+                          "typeIdentifier": "t_type$_t_enum$_Status_$770_$",
                           "typeString": "type(enum Stat.Status)"
                         }
                       },
-                      "id": 716,
+                      "id": 796,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -887,79 +881,78 @@
                       "memberName": "MATCHED",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "392:14:4",
+                      "src": "391:14:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$690",
+                        "typeIdentifier": "t_enum$_Status_$770",
                         "typeString": "enum Stat.Status"
                       }
                     },
-                    "src": "382:24:4",
+                    "src": "381:24:6",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 713,
-                  "id": 718,
+                  "functionReturnParameters": 793,
+                  "id": 798,
                   "nodeType": "Return",
-                  "src": "375:31:4"
+                  "src": "374:31:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 720,
+            "id": 800,
             "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": true,
+            "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 710,
+                "id": 790,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 709,
+                  "id": 789,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 354,
-                  "src": "341:9:4",
+                  "referencedDeclaration": 411,
+                  "src": "340:9:6",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "341:9:4"
+                "src": "340:9:6"
               }
             ],
             "name": "isMatched",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 708,
+              "id": 788,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 707,
+                  "id": 787,
                   "name": "status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 720,
-                  "src": "312:13:4",
+                  "scope": 800,
+                  "src": "311:13:6",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Status_$690",
+                    "typeIdentifier": "t_enum$_Status_$770",
                     "typeString": "enum Stat.Status"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 706,
+                    "id": 786,
                     "name": "Status",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 690,
-                    "src": "312:6:4",
+                    "referencedDeclaration": 770,
+                    "src": "311:6:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Status_$690",
+                      "typeIdentifier": "t_enum$_Status_$770",
                       "typeString": "enum Stat.Status"
                     }
                   },
@@ -967,20 +960,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "311:15:4"
+              "src": "310:15:6"
             },
-            "payable": false,
             "returnParameters": {
-              "id": 713,
+              "id": 793,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 712,
+                  "id": 792,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 720,
-                  "src": "360:4:4",
+                  "scope": 800,
+                  "src": "359:4:6",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -988,10 +980,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 711,
+                    "id": 791,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "360:4:4",
+                    "src": "359:4:6",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1001,26 +993,52 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "359:6:4"
+              "src": "358:6:6"
             },
-            "scope": 721,
-            "src": "293:120:4",
+            "scope": 801,
+            "src": "292:120:6",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 722,
-        "src": "50:365:4"
+        "scope": 802,
+        "src": "49:365:6"
       }
     ],
-    "src": "0:415:4"
+    "src": "0:414:6"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "2.0.1",
-  "updatedAt": "2019-01-12T15:57:14.578Z"
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2019-01-13T08:48:55.163Z",
+  "devdoc": {
+    "methods": {
+      "isOwner()": {
+        "return": "true if `msg.sender` is the owner of the contract."
+      },
+      "owner()": {
+        "return": "the address of the owner."
+      },
+      "renounceOwnership()": {
+        "details": "Allows the current owner to relinquish control of the contract."
+      },
+      "transferOwnership(address)": {
+        "details": "Allows the current owner to transfer control of the contract to a newOwner.",
+        "params": {
+          "newOwner": "The address to transfer ownership to."
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "renounceOwnership()": {
+        "notice": "Renouncing to ownership will leave the contract without an owner. It will not be possible to call the functions with the `onlyOwner` modifier anymore."
+      }
+    }
+  }
 }
