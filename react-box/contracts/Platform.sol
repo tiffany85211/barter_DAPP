@@ -11,6 +11,10 @@ contract Platform is Items{
         _changeWith(id1, id2);
     }
 
+    function addPreferAndCheck(uint id, uint preferId) external view returns(bool) {
+        return _addPreferAndCheck(id, preferId);
+    }
+
     function listUserItem() external view returns (uint[]) {
         return _listItems(msg.sender);
     }
