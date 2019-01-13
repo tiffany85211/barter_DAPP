@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import RaisedButton from 'material-ui/RaisedButton';
 
-export default class MyItems extends Component {
+export default class ItemGrid extends Component {
     constructor(props) {
       super(props);
       this.state = { 
