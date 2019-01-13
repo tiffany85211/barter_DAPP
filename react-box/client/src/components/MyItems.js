@@ -10,8 +10,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-
-import ButtonBases from './ButtonPage'
+import './style.css'
 
 export default class MyItems extends Component {
     constructor(props) {
@@ -110,7 +109,9 @@ export default class MyItems extends Component {
 
     renderItem(i) {
       return (
+        <div class='ItemList'>
         <ItemGrid key={i} id={i} item={this.state.items[i]} />
+        </div>
       );
     }
 
@@ -156,7 +157,7 @@ export default class MyItems extends Component {
             </DialogActions>
           </Dialog>
           <div>
-            <ul className="item-list">
+            <ul className="item-list" class="Flex">
               {this.state.items.map((item, i) => this.renderItem(i))}
             </ul>
             <div> Items size: {this.state.items.length}</div>
