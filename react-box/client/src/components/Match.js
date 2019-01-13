@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import Button from '@material-ui/core/Button';
-
 export default class Match extends Component {
   constructor(props) {
     super(props);
@@ -47,7 +45,7 @@ export default class Match extends Component {
 
   getNextItem = async () => {
     if(this.state.lastSeen === this.state.allItems.length) { this.setState({ end: true }); return; };
-    const resItem = await this.state.contract.getItem(this.state.allItems[this.state.lastSeen].toString(), {from: this.state.accounts[0]});
+    const resItem = await this.state.contract.getItem(this.state.allItems[this.state.lastSeen], {from: this.state.accounts[0]});
     const showItem = {
       name: resItem[0].toString(),
       description: resItem[1].toString()
@@ -130,8 +128,6 @@ export default class Match extends Component {
       if(this.state.end) { return(<div> END!!! </div>); }
       return (
         <div> 
-          <Button onClick={this.handleLike}>Like</Button>
-          <Button onClick={this.handleUnlike}>Nope</Button>
           <div>myID: {this.props.id} </div>
           <div>name: {this.state.showItem.name}</div>
           <div>description: {this.state.showItem.description}</div>

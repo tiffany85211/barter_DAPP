@@ -1,4 +1,4 @@
-var PlatForm = artifacts.require("./PlatForm.sol");
+var PlatForm = artifacts.require("./Platform.sol");
 
 module.exports = function(deployer) {
   deployer.deploy(PlatForm);

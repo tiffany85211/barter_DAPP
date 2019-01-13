@@ -85,14 +85,14 @@ class ItemGrid extends Component {
     }
     
     render() {
-        const {classes}=this.props;
+        const {classes, item } = this.props;
         return (
           <div className="Item-Container">
-            <Link to={`/barter/match/${this.props.item.id}`}>
+            <Link to={`/barter/match/${item.id}`}>
               <div className={classes.root}>
                   <ButtonBase
                     focusRipple
-                    key={this.props.item.id}
+                    key={item.id}
                     className={classes.image}
                     focusVisibleClassName={classes.focusVisible}
                     style={{width: '33.3333333333%'}}
@@ -104,7 +104,7 @@ class ItemGrid extends Component {
                         variant="subtitle1"
                         color="inherit"
                         className={classes.imageTitle}
-                      > 1234 {this.props.item.name}
+                      > {item.name}
                         <span className={classes.imageMarked} />
                       </Typography>
                     </span>

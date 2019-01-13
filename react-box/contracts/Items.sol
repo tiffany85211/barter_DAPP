@@ -19,13 +19,12 @@ contract Items is Ownable, Stat{
     mapping (uint => address) public itemToOwner;
     mapping (address => uint) ownerItemCount;
 
-    function _createItem(string memory name, string memory description) internal returns(uint) {
+    function _createItem(string memory name, string memory description) internal  {
         if (_items.length == 0) 
             _items.push(Item("[None]", "[First null element]", 0, Status.POSTING));
         uint id = _items.push(Item(name, description, 0, Status.POSTING))-1;
         itemToOwner[id] = msg.sender;
         ownerItemCount[msg.sender] = ownerItemCount[msg.sender].add(1);
-        return id;
     }
 
     function _changeWith(uint id1, uint id2) internal {

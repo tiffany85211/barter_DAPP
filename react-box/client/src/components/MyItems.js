@@ -60,23 +60,25 @@ export default class MyItems extends Component {
         await this.state.contract.newItem(this.state.name, this.state.description, {from: this.state.accounts[0] });
         const items = this.state.items.slice();;
         const myItemList = await this.state.contract.listUserItem({from: this.state.accounts[0]});
+        console.log(myItemList);
         var i; var maxid = 0;
         for(i = 0; i < myItemList.length; i++) {
           var itemid = myItemList[i].words[0];
           if(itemid > maxid) { maxid = itemid; }
         }
+        console.log("id", maxid);
         const res = await this.state.contract.getItem(maxid.toString(), {from: this.state.accounts[0]});
         const newItem = {
           id: maxid.toString(),
           name: res[0].toString(),
           description: res[1].toString()
         };
-        console.log("handleAdd", res[0].toString());
+        console.log("handleAdd: name=", res[0].toString());
         items.push(newItem);
         this.setState({ items });
         this.setState({ name: '', description: '', open: false });
 
-        fetch('/api/item', {
+        await fetch('/api/item', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
