@@ -11,7 +11,7 @@ contract Items is Ownable, Stat{
         string _description;
         uint _changeId;
         Status _status;
-        uint[] _preferItem;
+        // uint[] _preferItem;
     }
 
     //data
@@ -72,14 +72,14 @@ contract Items is Ownable, Stat{
         return itemIds;
     }
 
-    function _addPreferAndCheck(uint id, uint preferId) internal view returns(bool){
-        for (uint i = 0; i < _items[preferId]._preferItem.length; i++) {
-            if (_items[preferId]._preferItem[i] == id && _items[preferId]._status == Status.POSTING) {
-                _changeWith(id, preferId);
-                return true;
-            }
-        }
-        _items[id]._preferItem.push(preferId);
-        return false;
-    }
+    // function _addPreferAndCheck(uint id, uint preferId) internal view returns(bool){
+    //     for (uint i = 0; i < _items[preferId]._preferItem.length; i++) {
+    //         if (_items[preferId]._preferItem[i] == id && _items[preferId]._status == Status.POSTING) {
+    //             _changeWith(id, preferId);
+    //             return true;
+    //         }
+    //     }
+    //     _items[id]._preferItem.push(preferId);
+    //     return false;
+    // }
 }

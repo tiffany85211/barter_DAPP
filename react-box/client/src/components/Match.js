@@ -46,7 +46,6 @@ export default class Match extends Component {
   }
 
   getNextItem = async () => {
-    console.log("lastseen:", this.state.lastSeen);
     if(this.state.lastSeen === this.state.allItems.length) { this.setState({ end: true }); return; };
     const resItem = await this.state.contract.getItem(this.state.allItems[this.state.lastSeen].toString(), {from: this.state.accounts[0]});
     const showItem = {
@@ -70,6 +69,10 @@ export default class Match extends Component {
     for(i = 0; i < showItemlikeList.length; i++) {
       if(showItemlikeList[i].toString() === this.props.id.toString()) {
         console.log("THIS IS A MATCH!");
+        await this.state.contract.changeItem(
+          this.props.id.toString(), this.state.allItems[this.state.lastSeen - 1].toString(), 
+          {from: this.state.accounts[0] }); 
+        
         matched = true;
       }
     }
