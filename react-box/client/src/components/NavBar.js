@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -172,7 +173,7 @@ class NavBar extends React.Component {
             <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
               <MenuIcon />
             </IconButton>
-            <Link><img class='nav_logo' src={logo} alt=""/></Link>
+            <Link to={'/'}><img class='nav_logo' src={logo} alt=""/></Link>
             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
             
             </Typography>

@@ -3706,12 +3706,12 @@
         }
       },
       "links": {},
-      "address": "0x39F230D09e0b06165112724A978175adf2d86AB4",
-      "transactionHash": "0xb759774dd86335c2f481156b74ebf0a38364904a8f935b4f72973db4d1e8cddc"
+      "address": "0x99f2B91ADbD2dFC3e8A6D367cD17Be37003a6D1A",
+      "transactionHash": "0x75da6a633f6fc6d94c90561e6c04a3232dc463a59b2c7fc4c8b1519c6f4914dd"
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-01-13T13:50:30.051Z",
+  "updatedAt": "2019-01-13T14:00:49.766Z",
   "devdoc": {
     "methods": {
       "isOwner()": {

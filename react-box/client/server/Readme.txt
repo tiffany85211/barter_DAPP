@@ -2,7 +2,7 @@
 
 data structure (ItemSchema):
 {
-    itemID: int
+    id: int
     likedList: int[]
     lastSeen: int
 }

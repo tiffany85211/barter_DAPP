@@ -294,33 +294,35 @@ export default class Match extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      allItems: [],
       showItem: {},
+      allItems: [],
       lastSeen: 0,
-      likeList: [],
       end: false,
       accounts: this.props.accounts,
       contract: this.props.contract,
     };
-    // this.handleLike = this.handleLike.bind(this);
-    // this.handleUnlike = this.handleUnlike.bind(this);
+    this.handleLike = this.handleLike.bind(this);
+    this.handleUnlike = this.handleUnlike.bind(this);
   }
 
   componentDidMount = async () => {
     try {
+      await fetch(`/api/item/${this.props.id}`)
+        .then(res => res.json())
+        .then(item => { this.setState({ lastSeen: parseInt(item.lastSeen), likeList: item.likeList }); })
+        .catch((err) => { console.log('fetch get item error', err); });
       var i;
       const allItems = [];
       const res = await this.state.contract.listMatchItems({from: this.state.accounts[0]});
       for(i = 0; i < res.length; i++) {
         var itemid = res[i].words[0];
-        console.log(itemid);
-        if(itemid == 0) { break; }
+        if(itemid === 0) { break; }
         allItems.push(itemid);
       }
       this.setState({ allItems }, this.getNextItem);
     } catch (error) {
       console.log(error);
-    }
+    } 
   };
 
   componentWillReceiveProps(nextProps) {
@@ -332,6 +334,7 @@ export default class Match extends Component {
   }
 
   getNextItem = async () => {
+    console.log("lastseen:", this.state.lastSeen);
     if(this.state.lastSeen === this.state.allItems.length) { this.setState({ end: true }); return; };
     const resItem = await this.state.contract.getItem(this.state.allItems[this.state.lastSeen].toString(), {from: this.state.accounts[0]});
     const showItem = {
@@ -343,12 +346,69 @@ export default class Match extends Component {
   }
 
   handleLike  = async () => {
+    var showItemlikeList = [];
+    var i;
+    var matched = false;
+
+    await fetch(`/api/item/${this.state.allItems[this.state.lastSeen - 1]}`)
+      .then(res => res.json())
+      .then(item => { showItemlikeList = item.likeList; })
+      .catch((err) => { console.log('fetch get match item error', err); });
+    
+    for(i = 0; i < showItemlikeList.length; i++) {
+      if(showItemlikeList[i].toString() === this.props.id.toString()) {
+        console.log("THIS IS A MATCH!");
+        matched = true;
+      }
+    }
+    var likeID = this.state.allItems[this.state.lastSeen - 1];
+
+    if(!matched) {
+      await fetch(`/api/likeList/${this.props.id}`, {
+        method: 'PUT',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          likeID: likeID
+        }),
+      })
+      .then(res => res.status)
+      .catch((err) => { console.log('fetch put likeList error', err); });
+    }
+
+    await fetch(`/api/lastSeen/${this.props.id}`, {
+      method: 'PUT',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        lastSeen: this.state.lastSeen.toString(),
+      }),
+    })
+    .then(res => res.status)
+    .catch((err) => { console.log('fetch put lastSeen error', err); });
+    
     this.getNextItem();
   };
 
   handleUnlike = async () => {
-    this.getNextItem();
+    await fetch(`/api/lastSeen/${this.props.id}`, {
+      method: 'PUT',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        lastSeen: this.state.lastSeen.toString(),
+      }),
+    })
+    .then(res => console.log(res.status))
+    .catch((err) => { console.log('fetch put lastSeen error', err); });
 
+    this.getNextItem();
   };
   render() {
       if(this.state.end) { return(<div> END!!! </div>); }
@@ -360,6 +420,7 @@ export default class Match extends Component {
           <div>myID: {this.props.id} </div>
           <div>name: {this.state.showItem.name}</div>
           <div>description: {this.state.showItem.description}</div>
+          <div>lastSeen: {this.state.lastSeen} </div>
         </div>
       );
     }

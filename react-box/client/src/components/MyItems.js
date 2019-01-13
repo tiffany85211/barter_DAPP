@@ -11,6 +11,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
+import ButtonBases from './ButtonPage'
 
 export default class MyItems extends Component {
     constructor(props) {
@@ -40,6 +41,7 @@ export default class MyItems extends Component {
               name: res[0].toString(),
               description: res[1].toString()
             };
+            console.log("did mount: ", res[0].toString());
             items.push(newItem);
           }
           this.setState({ items });
@@ -58,21 +60,38 @@ export default class MyItems extends Component {
 
     handleAddItem = async () => {
         await this.state.contract.newItem(this.state.name, this.state.description, {from: this.state.accounts[0] });
-        const items = [];
-        var i;
+        const items = this.state.items.slice();;
         const myItemList = await this.state.contract.listUserItem({from: this.state.accounts[0]});
+        var i; var maxid = 0;
         for(i = 0; i < myItemList.length; i++) {
           var itemid = myItemList[i].words[0];
-          const res = await this.state.contract.getItem(itemid.toString(), {from: this.state.accounts[0]});
-          const newItem = {
-            id: itemid.toString(),
-            name: res[0].toString(),
-            description: res[1].toString()
-          };
-          items.push(newItem);
+          if(itemid > maxid) { maxid = itemid; }
         }
+        const res = await this.state.contract.getItem(maxid.toString(), {from: this.state.accounts[0]});
+        const newItem = {
+          id: maxid.toString(),
+          name: res[0].toString(),
+          description: res[1].toString()
+        };
+        console.log("handleAdd", res[0].toString());
+        items.push(newItem);
         this.setState({ items });
-        this.setState({name: '', description: '', open: false });
+        this.setState({ name: '', description: '', open: false });
+
+        fetch('/api/item', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            id: maxid.toString(),
+            lastSeen: "1",
+            likeList: []
+          }),
+        })
+        .then(res => console.log(res.status))
+        .catch((err) => { console.log('fetch post item error', err); });
     }
 
     handleClickAddItem() {
@@ -80,7 +99,7 @@ export default class MyItems extends Component {
     }
 
     handleClose() {
-      this.setState({ open: false });
+      this.setState({ open: false, name: '', description: '' });
     };
   
     handleChange = name => event => {
@@ -94,7 +113,7 @@ export default class MyItems extends Component {
         <ItemGrid key={i} id={i} item={this.state.items[i]} />
       );
     }
-  
+
     render() {
       return (
         <div className="App">
@@ -137,6 +156,7 @@ export default class MyItems extends Component {
             </DialogActions>
           </Dialog>
           <div>
+            <ButtonBases/>
             <ul className="item-list">
               {this.state.items.map((item, i) => this.renderItem(i))}
             </ul>
