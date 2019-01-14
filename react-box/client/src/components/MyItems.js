@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import ItemGrid from './ItemGrid';
+import ButtonBases from './ButtonPage'
 
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
+import classNames from 'classnames';
+import { withStyles } from '@material-ui/core/styles';
+import Icon from '@material-ui/core/Icon';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -11,8 +15,21 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import './style.css'
+import ButtonPage from "./ButtonPage";
 
-export default class MyItems extends Component {
+const styles = theme => ({
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'flex-end',
+  },
+  icon: {
+    margin: theme.spacing.unit * 2,
+  },
+  
+});
+
+class MyItems extends Component {
     constructor(props) {
       super(props);
       this.state = { 
@@ -116,12 +133,11 @@ export default class MyItems extends Component {
     }
 
     render() {
+      const {classes}=this.props;
       return (
         <div className="App">
-          <div className="add-item">
-            <FloatingActionButton onClick={this.handleClickAddItem}>
-              <ContentAdd />
-            </FloatingActionButton>
+          <div className="add-item marginAUTO" onClick={this.handleClickAddItem}>
+            <ButtonPage></ButtonPage>
           </div>
 
           <Dialog
@@ -132,6 +148,7 @@ export default class MyItems extends Component {
             <DialogTitle id="form-dialog-title">Upload an item</DialogTitle>
             <DialogContent>
               <DialogContentText>Please upload your item!</DialogContentText>
+              <div>
               <TextField
                 id="outlined-name"
                 label="Name"
@@ -139,7 +156,8 @@ export default class MyItems extends Component {
                 onChange={this.handleChange('name')}
                 margin="normal"
                 variant="outlined"
-              />
+              /></div>
+              <div>
               <TextField
                 id="outlined-multiline-static"
                 label="Description"
@@ -149,10 +167,10 @@ export default class MyItems extends Component {
                 rows="4"
                 margin="normal"
                 variant="filled"
-              />
+              /></div>
             </DialogContent>
             <DialogActions>
-              <Button onClick={this.handleClose} color="primary">Cancel</Button>
+              <Button onClick={this.handleClose} color='#d81313'>Cancel</Button>
               <Button onClick={this.handleAddItem} color="primary">Add Item</Button>
             </DialogActions>
           </Dialog>
@@ -160,10 +178,11 @@ export default class MyItems extends Component {
             <ul className="item-list" class="Flex">
               {this.state.items.map((item, i) => this.renderItem(i))}
             </ul>
-            <div> Items size: {this.state.items.length}</div>
+            {/* <div> Items size: {this.state.items.length}</div> */}
           </div>
         </div>
       );
     }
   }
 
+  export default withStyles(styles)(MyItems);

@@ -99,10 +99,36 @@ li {
 
 }
 
-.ItemList{
-    display: flex;
-    flex:0 0 33.33333%;
-    flex-wrap: wrap;
-    min-width: 10px;
-    width: '100%';
-}
+
+
+#svgContainer {
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #1E1C26;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .size{
+      margin-top: auto;
+      margin: auto;
+      max-width: 50em;
+  }
+  .fab{
+    margin:auto;
+  }
+
+  .extendedIcon{
+    margin-right: auto,
+  }
+
+  .marginAUTO{
+    width: '300%',
+  }
+  
+  .font{
+    font-size:"50px",
+  }

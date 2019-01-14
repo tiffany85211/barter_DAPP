@@ -1,9 +1,20 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import RaisedButton from 'material-ui/RaisedButton';
-// import Lottie from 'lottie-react-web';
-// import animation from 'https://labs.nearpod.com/bodymovin/demo/markus/halloween/markus.json'
+import { withStyles } from '@material-ui/core/styles';
+import Lottie from 'lottie-react-web'
+import animation from './data.json'
+import Fab from '@material-ui/core/Fab';
+import NavigationIcon from '@material-ui/icons/Navigation';
+import './style.css'
 
+const styles = theme => ({
+  fab: {
+    margin: theme.spacing.unit,
+  },
+  extendedIcon: {
+    marginRight: theme.spacing.unit,
+  },
+});
 class Homepage extends Component {
   constructor(props) {
     super(props);
@@ -12,18 +23,25 @@ class Homepage extends Component {
   }
 
   render() {
+    const {classes}=this.props;
     return (
-      <div>
-        {/* <Lottie
-        options={{
-          animationData: 'https://labs.nearpod.com/bodymovin/demo/markus/halloween/markus.json'
-        }}/> */}
+      <div class = 'size'>
+      <Lottie
+      options={{
+        animationData: animation
+      }}
+      height={{height:100}}
+      />
+      <div id='bm'></div>
         <Link to="/barter/myitems">
-          <RaisedButton label="START" style={{ margin: 12 }} />
+        <Fab variant="extended" aria-label="Delete" className={classes.fab}>
+        <NavigationIcon className={classes.extendedIcon} />
+        Start Now !
+          </Fab>
         </Link>
       </div>
     );
   }
 }
 
-export default Homepage;
+export default withStyles(styles)(Homepage);
