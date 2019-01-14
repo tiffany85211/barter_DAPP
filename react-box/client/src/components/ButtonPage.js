@@ -114,7 +114,11 @@ function ButtonBases(props) {
               component="span"
               variant="subtitle1"
               color="#28a817"
-      
+
+              style={{
+                color: 'white',
+                fontSize: '30px',
+              }}
               className={classes.imageTitle}
             >
               {image.title}

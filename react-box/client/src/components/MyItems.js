@@ -51,14 +51,16 @@ class MyItems extends Component {
         const myItemList = await this.state.contract.listUserItem({from: this.state.accounts[0]});
           for(i = 0; i < myItemList.length; i++) {
             var itemid = myItemList[i].words[0];
-            const res = await this.state.contract.getItem(itemid.toString(), {from: this.state.accounts[0]});
-            const newItem = {
-              id: itemid.toString(),
-              name: res[0].toString(),
-              description: res[1].toString()
-            };
-            console.log("did mount: ", res[0].toString());
-            items.push(newItem);
+            if(itemid !== 0) {
+                const res = await this.state.contract.getItem(itemid.toString(), {from: this.state.accounts[0]});
+                const newItem = {
+                  id: itemid.toString(),
+                  name: res[0].toString(),
+                  description: res[1].toString()
+                };
+                console.log("did mount: ", res[0].toString());
+                items.push(newItem);
+            }
           }
           this.setState({ items });
       } catch (error) {
@@ -126,14 +128,14 @@ class MyItems extends Component {
 
     renderItem(i) {
       return (
-        <div class='ItemList'>
-        <ItemGrid key={i} id={i} item={this.state.items[i]} />
+        <div class='ItemList' key={i} >
+          <ItemGrid id={i} item={this.state.items[i]} />
         </div>
       );
     }
 
     render() {
-      const {classes}=this.props;
+      const { classes }=this.props;
       return (
         <div className="App">
           <div className="add-item marginAUTO" onClick={this.handleClickAddItem}>
@@ -178,7 +180,6 @@ class MyItems extends Component {
             <ul className="item-list" class="Flex">
               {this.state.items.map((item, i) => this.renderItem(i))}
             </ul>
-            {/* <div> Items size: {this.state.items.length}</div> */}
           </div>
         </div>
       );
