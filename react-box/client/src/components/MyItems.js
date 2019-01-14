@@ -10,6 +10,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import './style.css'
 
 export default class MyItems extends Component {
     constructor(props) {
@@ -66,14 +67,12 @@ export default class MyItems extends Component {
           var itemid = myItemList[i].words[0];
           if(itemid > maxid) { maxid = itemid; }
         }
-        console.log("id", maxid);
         const res = await this.state.contract.getItem(maxid.toString(), {from: this.state.accounts[0]});
         const newItem = {
           id: maxid.toString(),
           name: res[0].toString(),
           description: res[1].toString()
         };
-        console.log("handleAdd: name=", res[0].toString());
         items.push(newItem);
         this.setState({ items });
         this.setState({ name: '', description: '', open: false });
@@ -86,7 +85,7 @@ export default class MyItems extends Component {
           },
           body: JSON.stringify({
             id: maxid.toString(),
-            lastSeen: "1",
+            lastSeen: "0",
             likeList: []
           }),
         })
@@ -110,7 +109,9 @@ export default class MyItems extends Component {
 
     renderItem(i) {
       return (
+        <div class='ItemList'>
         <ItemGrid key={i} id={i} item={this.state.items[i]} />
+        </div>
       );
     }
 
@@ -141,7 +142,7 @@ export default class MyItems extends Component {
               />
               <TextField
                 id="outlined-multiline-static"
-                label="Multiline"
+                label="Description"
                 multiline
                 value={this.state.description}
                 onChange={this.handleChange('description')}
@@ -156,7 +157,7 @@ export default class MyItems extends Component {
             </DialogActions>
           </Dialog>
           <div>
-            <ul className="item-list">
+            <ul className="item-list" class="Flex">
               {this.state.items.map((item, i) => this.renderItem(i))}
             </ul>
             <div> Items size: {this.state.items.length}</div>

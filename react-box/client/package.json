@@ -12,6 +12,7 @@
     "express": "^4.16.4",
     "hammerjs": "^2.0.8",
     "jquery": "^3.3.1",
+    "lottie-react-web": "^2.1.4",
     "material-ui": "^0.20.2",
     "mongodb": "^3.1.10",
     "mongoose": "^5.4.3",

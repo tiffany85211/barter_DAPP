@@ -51,7 +51,7 @@ contract Items is Ownable, Stat{
     }
 
     function _item(uint i, address _owner) internal view returns (string memory, string memory) {
-        if (_owner == itemToOwner[i] && _items[i]._status == Status.POSTING) {
+        if ( _items[i]._status == Status.POSTING) {
             return (_items[i]._name, _items[i]._description );
         }
         else {

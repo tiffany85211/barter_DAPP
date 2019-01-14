@@ -95,7 +95,7 @@ class ItemGrid extends Component {
                     key={item.id}
                     className={classes.image}
                     focusVisibleClassName={classes.focusVisible}
-                    style={{width: '33.3333333333%'}}
+                    style={{width: '100%'}}
                   >
                     <span className={classes.imageBackdrop} />
                     <span className={classes.imageButton}>

@@ -89,3 +89,20 @@ li {
 .nav_color{
     background: #ffffff;
 }
+
+.Flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:start;
+    margin-left: 10px;
+
+}
+
+.ItemList{
+    display: flex;
+    flex:0 0 33.33333%;
+    flex-wrap: wrap;
+    min-width: 10px;
+    width: '100%';
+}

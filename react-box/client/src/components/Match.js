@@ -1,9 +1,23 @@
 import React, { Component } from "react";
 
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Slide from '@material-ui/core/Slide';
+import MediaCard from './MediaCard'
+
+function Transition(props) {
+  return <Slide direction="up" {...props} />;
+}
+
 export default class Match extends Component {
   constructor(props) {
     super(props);
     this.state = { 
+      isMatchOpen: false,
       showItem: {},
       allItems: [],
       lastSeen: 0,
@@ -22,7 +36,7 @@ export default class Match extends Component {
         .then(item => { this.setState({ lastSeen: parseInt(item.lastSeen), likeList: item.likeList }); })
         .catch((err) => { console.log('fetch get item error', err); });
       var i;
-      const allItems = [];
+      const allItems = []; 
       const res = await this.state.contract.listMatchItems({from: this.state.accounts[0]});
       for(i = 0; i < res.length; i++) {
         var itemid = res[i].words[0];
@@ -43,9 +57,14 @@ export default class Match extends Component {
     });
   }
 
+  handleClose = () => {
+    this.setState({ isMatchOpen: false });
+  };
+
   getNextItem = async () => {
+    console.log("lastseen:", this.state.lastSeen);
     if(this.state.lastSeen === this.state.allItems.length) { this.setState({ end: true }); return; };
-    const resItem = await this.state.contract.getItem(this.state.allItems[this.state.lastSeen], {from: this.state.accounts[0]});
+    const resItem = await this.state.contract.getItem(this.state.allItems[this.state.lastSeen].toString(), {from: this.state.accounts[0]});
     const showItem = {
       name: resItem[0].toString(),
       description: resItem[1].toString()
@@ -66,11 +85,7 @@ export default class Match extends Component {
     
     for(i = 0; i < showItemlikeList.length; i++) {
       if(showItemlikeList[i].toString() === this.props.id.toString()) {
-        console.log("THIS IS A MATCH!");
-        await this.state.contract.changeItem(
-          this.props.id.toString(), this.state.allItems[this.state.lastSeen - 1].toString(), 
-          {from: this.state.accounts[0] }); 
-        
+        this.setState({ isMatchOpen: true });
         matched = true;
       }
     }
@@ -123,15 +138,39 @@ export default class Match extends Component {
 
     this.getNextItem();
   };
-
   render() {
-      if(this.state.end) { return(<div> END!!! </div>); }
+      if(this.state.end && !this.state.isMatchOpen) { return(<div> END!!! </div>); }
       return (
         <div> 
           <div>myID: {this.props.id} </div>
-          <div>name: {this.state.showItem.name}</div>
-          <div>description: {this.state.showItem.description}</div>
-          <div>lastSeen: {this.state.lastSeen} </div>
+          <MediaCard name={this.state.showItem.name} description={this.state.showItem.description} />
+          <Button onClick={this.handleUnlike}>Nope</Button>
+          <Button onClick={this.handleLike}>Like</Button>
+          <div>
+            <Dialog
+              open={this.state.isMatchOpen}
+              TransitionComponent={Transition}
+              keepMounted
+              onClose={this.handleClose}
+              aria-labelledby="alert-dialog-slide-title"
+              aria-describedby="alert-dialog-slide-description"
+            >
+              <DialogTitle id="alert-dialog-slide-title">
+                {"YOU HAVE A MATCH!!"}
+              </DialogTitle>
+              <DialogContent>
+                <DialogContentText id="alert-dialog-slide-description">
+                    Your Match Item: {this.state.showItem.name}
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={this.handleClose} color="primary">
+                  OK
+                </Button>
+              </DialogActions>
+            </Dialog>
+          </div>
+
         </div>
       );
     }
