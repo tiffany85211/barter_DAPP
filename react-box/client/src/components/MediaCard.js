@@ -6,6 +6,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
+import '../css/style.css'
+
 const styles = {
   card: {
     minWidth: 346,
@@ -33,10 +35,10 @@ class MediaCard extends React.Component {
           title="Contemplative Reptile"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h5" component="h2" class="googlefont">
            {name}
           </Typography>
-          <Typography component="p">
+          <Typography component="p" class="googlefont">
             {description}
           </Typography>
         </CardContent>

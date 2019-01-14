@@ -4,7 +4,7 @@ import createReactClass from 'create-react-class';
 import addons from 'react-addons';
 import Hammer from 'hammerjs';
 import merge from 'merge';
-import './style.css'
+import '../css/style.css'
 import Button from '@material-ui/core/Button';
 
 var Card = createReactClass({

@@ -2,10 +2,9 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
-import React, { Component } from "react";
-import { Link } from 'react-router-dom';
-import RaisedButton from 'material-ui/RaisedButton';
-import './style.css'
+import React from "react";
+import '../css/style.css'
+
 const styles = theme => ({
   root: {
     display: 'flex',
@@ -114,7 +113,6 @@ function ButtonBases(props) {
               component="span"
               variant="subtitle1"
               color="#28a817"
-
               style={{
                 color: 'white',
                 fontSize: '30px',

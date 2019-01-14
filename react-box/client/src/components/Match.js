@@ -8,7 +8,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import MediaCard from './MediaCard'
-import './style.css'
+import '../css/style.css'
 
 function Transition(props) {
   return <Slide direction="up" {...props} />;
@@ -142,9 +142,11 @@ export default class Match extends Component {
 
     this.getNextItem();
   };
+
   handleClose = () => {
     this.setState({ isMatchOpen: false });
   };
+
   render() {
       if(this.state.end && !this.state.isMatchOpen) { 
           return(<div> 
@@ -165,8 +167,8 @@ export default class Match extends Component {
             <MediaCard  name={this.state.showItem.name} description={this.state.showItem.description} />
           </div>
           <div style={{minHeight: '300px'}}>
-            <Button style={{width: '173px', heigth:'100%', backgroundColor: '#FFF0F0'}}  onClick={this.handleUnlike}>Nope</Button>
-            <Button style={{width: '173px', heigth:'100%', backgroundColor:'#8DC884'}}  onClick={this.handleLike}>Like</Button>
+            <Button style={{width: '173px', heigth:'100%', backgroundColor: '#FFF0F0'}}  class="googlefont" onClick={this.handleUnlike}>Nope</Button>
+            <Button style={{width: '173px', heigth:'100%', backgroundColor:'#8DC884'}}   class="googlefont" onClick={this.handleLike}>Like</Button>
           </div>
           <div>
             <Dialog

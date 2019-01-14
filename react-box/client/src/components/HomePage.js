@@ -5,7 +5,7 @@ import Lottie from 'lottie-react-web'
 import animation from './data.json'
 import Fab from '@material-ui/core/Fab';
 import NavigationIcon from '@material-ui/icons/Navigation';
-import './style.css'
+import '../css/style.css'
 
 const styles = theme => ({
   fab: {

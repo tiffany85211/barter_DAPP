@@ -1,12 +1,6 @@
 import React, { Component } from "react";
-import ItemGrid from './ItemGrid';
-import ButtonBases from './ButtonPage'
 
-import FloatingActionButton from 'material-ui/FloatingActionButton';
-import ContentAdd from 'material-ui/svg-icons/content/add';
-import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
-import Icon from '@material-ui/core/Icon';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -14,8 +8,10 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import './style.css'
+
+import ItemGrid from './ItemGrid';
 import ButtonPage from "./ButtonPage";
+import '../css/style.css'
 
 const styles = theme => ({
   root: {
