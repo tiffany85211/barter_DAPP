@@ -4,8 +4,18 @@ import createReactClass from 'create-react-class';
 import addons from 'react-addons';
 import Hammer from 'hammerjs';
 import merge from 'merge';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import './style.css'
 import Button from '@material-ui/core/Button';
+import Slide from '@material-ui/core/Slide';
+import image1 from './images/1.jpg'
+function Transition(props) {
+    return <Slide direction="up" {...props} />;
+  }
 
 var Card = createReactClass({
   getInitialState: function() {
@@ -67,15 +77,16 @@ var Card = createReactClass({
 
       return (
               <div style={style} className={classes}>
+              <img src={this.props.image}></img>
               <h1>{this.props.title}</h1>
-              <p>{this.props.text}</p>
-              <img src={'./image/'+this.props.image}></img>
+              <h5>{this.props.text}</h5>
               </div>
       );
   }
 });
 
 var DraggableCard = createReactClass({
+    
   getInitialState: function() {
       return {
           x: 0,
@@ -127,8 +138,10 @@ var DraggableCard = createReactClass({
               card = ReactDOM.findDOMNode(this);
 
           if (this.state.x < -50) {
+              this.props.handleUnlike()
               this.props.onOutScreenLeft(this.props.cardId);
           } else if ((this.state.x + (card.offsetWidth - 50)) > screen.offsetWidth) {
+              this.props.handleUnlike()
               this.props.onOutScreenRight(this.props.cardId);
           } else {
               this.resetPosition();
@@ -224,7 +237,71 @@ var Swipe = createReactClass({
           alertRight: false
       };
   },
+handleLike  : async () => {
+    var showItemlikeList = [];
+    var i;
+    var matched = false;
 
+    await fetch(`/api/item/${this.state.allItems[this.state.lastSeen - 1]}`)
+      .then(res => res.json())
+      .then(item => { showItemlikeList = item.likeList; })
+      .catch((err) => { console.log('fetch get match item error', err); });
+    
+    for(i = 0; i < showItemlikeList.length; i++) {
+      if(showItemlikeList[i].toString() === this.props.id.toString()) {
+        this.setState({ isMatchOpen: true });
+        matched = true;
+      }
+    }
+    var likeID = this.state.allItems[this.state.lastSeen - 1];
+
+    if(!matched) {
+      await fetch(`/api/likeList/${this.props.id}`, {
+        method: 'PUT',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          likeID: likeID
+        }),
+      })
+      .then(res => res.status)
+      .catch((err) => { console.log('fetch put likeList error', err); });
+    }
+
+    await fetch(`/api/lastSeen/${this.props.id}`, {
+      method: 'PUT',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        lastSeen: this.state.lastSeen.toString(),
+      }),
+    })
+    .then(res => res.status)
+    .catch((err) => { console.log('fetch put lastSeen error', err); });
+    
+    this.getNextItem();
+  },
+
+  handleUnlike : async () => {
+    await fetch(`/api/lastSeen/${this.props.id}`, {
+      method: 'PUT',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        lastSeen: this.state.lastSeen.toString(),
+      }),
+    })
+    .then(res => console.log(res.status))
+    .catch((err) => { console.log('fetch put lastSeen error', err); });
+
+    this.getNextItem();
+  },
   removeCard: function(side, cardId) {
       setTimeout(function(){
           if (side === 'left') {
@@ -242,14 +319,20 @@ var Swipe = createReactClass({
           alertRight: side === 'right'
       });
   },
+  
+
+  
 
   render: function() {
+      
       var cards = this.state.cards.map(function(c, index, coll) {
           var props = {
               cardId: c.id,
               index: index,
               onOutScreenLeft: this.removeCard.bind(this, 'left'),
               onOutScreenRight: this.removeCard.bind(this, 'right'),
+              handleLike : this.handleLike.bind(this),
+              handleUnlike : this.handleUnlike.bind(this),
               title: c.title,
               text: c.text,
               image: c.image
@@ -278,16 +361,18 @@ var Swipe = createReactClass({
             <div id="cards">
                   {cards}
             </div>
-            <div className={classesAlertLeft}>Nope</div>
-            <div className={classesAlertRight}>Like</div>
+            <div className={classesAlertLeft}><Button onClick={this.props.handleUnlike}>Nope</Button></div>
+            <div className={classesAlertRight}><Button onClick={this.props.handlelike}>Like</Button></div>
           </div>
       );
   }
 });
 
 var data = [
-{title: 'test', text: 'test', id: '1', image:"1.jpg"},
-{title: 'test2', text: 'test', id: '2', image: '2.jpg'}
+{title: 'No More Match!', text: 'Sorry! No more matching items for you. ', id:'4', image:"https://img.icons8.com/metro/1600/crying-baby.png"},
+{title: 'iphone XS', text: 'new,1 year in Taipei. free shipping', id:'1', image:"https://a.ecimg.tw/img/sites/apple/pm/pd1-iphone_6.jpg"},
+{title: 'Ipad Pro6', text: '3nd hand,1 year in Taipei. free shipping', id: '2', image: 'https://a.ecimg.tw/img/sites/apple/pm/pd2-mac_06.jpg'},
+{title: 'Beats Headphone', text: '2nd hand,1 year in Taipei. free shipping', id: '3', image: 'https://a.ecimg.tw/img/sites/apple/pm/pd5-beats_07.jpg'}
 ];
 
 export default class Match extends Component {
@@ -357,7 +442,7 @@ export default class Match extends Component {
     
     for(i = 0; i < showItemlikeList.length; i++) {
       if(showItemlikeList[i].toString() === this.props.id.toString()) {
-        console.log("THIS IS A MATCH!");
+        this.setState({ isMatchOpen: true });
         matched = true;
       }
     }
@@ -410,17 +495,45 @@ export default class Match extends Component {
 
     this.getNextItem();
   };
+  handleClose = () => {
+    this.setState({ isMatchOpen: false });
+  };
   render() {
       if(this.state.end) { return(<div> END!!! </div>); }
       return (
         <div> 
           <Swipe initialCardsData={data}/>
-          <Button onClick={this.handleLike}>Like</Button>
+          {/*
           <Button onClick={this.handleUnlike}>Nope</Button>
+          <Button onClick={this.handleLike}>Like</Button>
           <div>myID: {this.props.id} </div>
           <div>name: {this.state.showItem.name}</div>
           <div>description: {this.state.showItem.description}</div>
-          <div>lastSeen: {this.state.lastSeen} </div>
+          <div>lastSeen: {this.state.lastSeen} </div> */}
+          <div>
+            <Dialog
+              open={this.state.isMatchOpen}
+              TransitionComponent={Transition}
+              keepMounted
+              onClose={this.handleClose}
+              aria-labelledby="alert-dialog-slide-title"
+              aria-describedby="alert-dialog-slide-description"
+            >
+              <DialogTitle id="alert-dialog-slide-title">
+                {"YOU HAVE A MATCH!!"}
+              </DialogTitle>
+              <DialogContent>
+                <DialogContentText id="alert-dialog-slide-description">
+                    Your Match Item: {this.state.showItem.name}
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={this.handleClose} color="primary">
+                  OK
+                </Button>
+              </DialogActions>
+            </Dialog>
+          </div>
         </div>
       );
     }

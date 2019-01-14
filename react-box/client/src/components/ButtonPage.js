@@ -5,20 +5,20 @@ import Typography from '@material-ui/core/Typography';
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import RaisedButton from 'material-ui/RaisedButton';
-
+import './style.css'
 const styles = theme => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
     minWidth: 300,
-    width: '100%',
+    width: '300%',
   },
   image: {
     position: 'relative',
-    height: 200,
+    height: 100,
     [theme.breakpoints.down('xs')]: {
       width: '100% !important', // Overrides inline-style
-      height: 100,
+      height: 10,
     },
     '&:hover, &$focusVisible': {
       zIndex: 1,
@@ -29,7 +29,7 @@ const styles = theme => ({
         opacity: 0,
       },
       '& $imageTitle': {
-        border: '4px solid currentColor',
+        border: '5px solid currentColor',
       },
     },
   },
@@ -60,18 +60,19 @@ const styles = theme => ({
     right: 0,
     top: 0,
     bottom: 0,
-    backgroundColor: theme.palette.common.black,
+    backgroundColor: '#82edab',
     opacity: 0.4,
     transition: theme.transitions.create('opacity'),
   },
   imageTitle: {
+    font:'200px',
     position: 'relative',
     padding: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 4}px ${theme.spacing.unit + 6}px`,
   },
   imageMarked: {
     height: 3,
     width: 18,
-    backgroundColor: theme.palette.common.white,
+    backgroundColor: theme.palette.common.green,
     position: 'absolute',
     bottom: -2,
     left: 'calc(50% - 9px)',
@@ -81,37 +82,21 @@ const styles = theme => ({
 
 const images = [
   {
-    url: '/static/images/grid-list/breakfast.jpg',
-    title: 'Breakfast',
-    width: '33.3333333333%',
-  },
-  {
-    url: '/static/images/grid-list/burgers.jpg',
-    title: 'Burgers',
-    width: '33.3333333333%',
-  },
-  {
-    url: '/static/images/grid-list/camera.jpg',
-    title: 'Camera',
-    width: '33.3333333333%',
-  },
-  {
-    url: '/static/images/grid-list/camera.jpg',
-    title: 'Camera',
-    width: '33.3333333333%',
-  },
+    url: '',
+    title: '+',
+    width: '33.3333333333%',}
 ];
 
 function ButtonBases(props) {
   const { classes } = props;
 
   return (
-    <div className={classes.root}>
+    <div class='margin_AUTO'className={classes.root} >
       {images.map(image => (
         <ButtonBase
           focusRipple
           key={image.title}
-          className={classes.image}
+          className={classes.image }
           focusVisibleClassName={classes.focusVisible}
           style={{
             width: image.width,
@@ -128,7 +113,8 @@ function ButtonBases(props) {
             <Typography
               component="span"
               variant="subtitle1"
-              color="inherit"
+              color="#28a817"
+      
               className={classes.imageTitle}
             >
               {image.title}
