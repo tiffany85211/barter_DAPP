@@ -24,3 +24,12 @@ The platform also inherits the advantages of decentralized application: secure, 
     cd react-box/client
     npm run start
 ```
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## Functions
+1. Homepage
+2. Upload an item and store its information on the blockchain.
+3. Click on the item to start the exchange process.
+4. Click "Like" or "Nope" button to show your preferences.
+5. If 2 items from different users (Ethereum accounts) "likes" each other, there is a match! 
+6. The matched items will be recorded in the blockchain.
