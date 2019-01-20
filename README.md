@@ -9,15 +9,18 @@ The platform also inherits the advantages of decentralized application: secure, 
 ## Getting Started (localhost)
 1. Install all dependencies
 ```
+    cd react-box/client
     npm run install
 ```
 2. Start Ganache on your computer and login to your Ethereum account using Metamask
 3. Deployment:
 ```
+    cd react-box
     truffle compile
     truffle migrate --reset
 ```
 4. Run client on localhost and run server (MongoDB) at the same time 
 ```
+    cd react-box/client
     npm run start
 ```
