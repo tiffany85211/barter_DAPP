@@ -1,6 +1,9 @@
 # Barter DAPP
 Barter Economy World on Ethereum DApp
 
+## Demo
+Video: https://youtu.be/27s_D8ffbxM
+
 ## Introduction
 This is a second-hand exchange platform using blockchain technology.  
 Users can exchange their second-hand commodities for another, without the use of money or any type of tokens.  Thus, the owner can define the unique value of each used product.  
@@ -27,8 +30,8 @@ The platform also inherits the advantages of decentralized application: secure, 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Functions
-1. Homepage
-2. Upload an item and store its information on the blockchain.
+1. Homepage ![Click start](/images/Homepage.png)
+2. Upload an item and store its information on the blockchain. ![Click +](/images/Upload.png)
 3. Click on the item to start the exchange process.
 4. Click "Like" or "Nope" button to show your preferences.
 5. If 2 items from different users (Ethereum accounts) "likes" each other, there is a match! 
