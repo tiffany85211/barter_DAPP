@@ -19,7 +19,7 @@
     "lottie-web": "^5.4.3",
     "material-ui": "^0.20.2",
     "mongodb": "^3.1.10",
-    "mongoose": "^5.4.3",
+    "mongoose": "^5.7.5",
     "parcel-bundler": "^1.11.0",
     "popper.js": "^1.14.6",
     "prop-types": "^15.6.2",
